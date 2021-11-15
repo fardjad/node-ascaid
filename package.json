@@ -1,0 +1,42 @@
+{
+  "name": "ascaid",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A collection of AsciiDoc tools",
+  "author": "Fardjad Davari <public@fardjad.com>",
+  "license": "MIT",
+  "keywords": [
+    "asciidoc",
+    "asciidoctor",
+    "pandoc",
+    "markdown",
+    "confluence",
+    "publish",
+    "documentation",
+    "kroki"
+  ],
+  "scripts": {
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "bin": {
+    "ascaid": "./cli/ascaid",
+    "ascaid.js": "./cli/ascaid.js"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.0.3",
+    "asciidoctor": "^2.2.5",
+    "asciidoctor-kroki": "^0.14.0",
+    "axios": "^0.24.0",
+    "browser-sync": "^2.27.7",
+    "commander": "^8.3.0",
+    "cross-env": "^7.0.3",
+    "execa": "^5.1.1",
+    "glob": "^7.2.0",
+    "make-synchronous": "^1.0.0",
+    "widdershins": "^4.0.1"
+  },
+  "repository": "git@github.com:fardjad/node-ascaid.git",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}

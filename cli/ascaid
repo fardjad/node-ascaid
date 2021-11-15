@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+/usr/bin/env node -- ${SCRIPT_DIR}/ascaid.js "$@"
