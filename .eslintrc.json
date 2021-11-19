@@ -1,0 +1,22 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:unicorn/recommended", "google", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "rules": {
+    "require-jsdoc": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-process-exit": "off"
+  }
+}
