@@ -240,4 +240,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### WebStorm ###
+.idea/
+
 # End of https://www.toptal.com/developers/gitignore/api/vim,node,visualstudiocode,macos,linux,windows

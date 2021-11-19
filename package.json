@@ -5,6 +5,13 @@
   "description": "A collection of AsciiDoc tools",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
+  "files": [
+    "index.js",
+    "lib/",
+    "cli/",
+    "!lib/**/*.test.js",
+    "!**/__fixtures__/"
+  ],
   "keywords": [
     "asciidoc",
     "asciidoctor",

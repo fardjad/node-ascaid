@@ -1,0 +1,12 @@
+{
+  "name": "asciidoctor-extension",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "ascaid": "^1.1.0",
+    "make-synchronous": "^1.0.0",
+    "widdershins": "^4.0.1",
+    "yaml": "^1.10.2"
+  }
+}

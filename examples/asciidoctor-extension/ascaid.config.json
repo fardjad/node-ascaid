@@ -1,0 +1,3 @@
+{
+  "extensions": ["./adoc-oas-extension.js"]
+}
