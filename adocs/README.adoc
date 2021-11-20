@@ -1,0 +1,73 @@
+:asciidoc: https://asciidoctor.org[AsciiDoc]
+:asciidoctorjs: https://docs.asciidoctor.org/asciidoctor.js/latest/[Asciidoctor.js]
+:asciidoctorjs-extensions: https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem/[Asciidoctor.js Extensions]
+:pandoc: https://pandoc.org/[Pandoc]
+:gfm: https://github.github.com/gfm/[GitHub Flavored Markdown]
+:confluence: https://www.atlassian.com/software/confluence/[Confluence]
+
+== ascaid: a collection of AsciiDoc tools
+
+[svgbob]
+....
+  ___   _____ _____   ___ ______ _____
+ / _ \ /  ___/  __ \ / _ \|  _  \  ___|
+/ /_\ \\ `--.| /  \// /_\ \ | | | |__
+|  _  | `--. \ |    |  _  | | | |  __|
+| | | |/\__/ / \__/\| | | | |/ /| |___
+\_| |_/\____/ \____/\_| |_/___/ \____/
+....
+
+=== Description
+
+*ascade* is a CLI tool for writing and publishing {asciidoc} files. It uses {asciidoctorjs} and {pandoc} under the hood and has the following main features:
+
+* It can be configured to load {asciidoctorjs-extensions}
+* It includes a live server to help with writing AsciiDoc documents
+* It can convert Asciidoc files to {gfm}
+* It can publish GitHub Flavored Markdown files to {confluence}
+
+=== Requirements
+. https://nodejs.org/[Node.js v16+]
+. https://pandoc.org/[Pandoc]
+
+=== Installation
+
+You can install the package globally with npm:
+
+----
+npm install -g ascaid
+----
+
+=== Commands
+
+==== `ascaid help`
+
+exec::[command="node ../cli/ascaid.js help"]
+
+==== `ascaid serve`
+
+exec::[command="node ../cli/ascaid.js help serve"]
+
+==== `ascaid adoc-to-gfm`
+
+exec::[command="node ../cli/ascaid.js help adoc-to-gfm"]
+
+==== `ascaid gfm-to-confluence`
+
+exec::[command="node ../cli/ascaid.js help gfm-to-confluence"]
+
+=== Config File
+
+You can configure *ascaid* to load additional extensions by creating a file named `ascaid.config.json` in the current working directory. A working example can be found link:../examples/asciidoctor-extension[here].
+
+https://github.com/Mogztter/asciidoctor-kroki[Asciidoctor Kroki Extension] is included by default for convenience.
+
+=== GitHub Actions Usage
+
+To publish documents to confluence you'll need to create an https://id.atlassian.com/manage/api-tokens[API token] and a root page to publish the documents under.
+
+An example https://docs.github.com/actions[GitHub Actions] YAML file can be found link:../examples/github-actions-public-to-confluence/public-docs.yml[here].
+
+=== License
+
+https://opensource.org/licenses/MIT[MIT]

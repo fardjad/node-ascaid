@@ -1,11 +1,12 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.8",
   "description": "A collection of AsciiDoc tools",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
   "files": [
+    "README.md",
     "index.js",
     "lib/",
     "cli/",
@@ -24,6 +25,7 @@
   ],
   "scripts": {
     "prepare": "husky install",
+    "fix": "eslint --fix . && prettier -w .",
     "test": "cross-env NODE_OPTIONS='--experimental-vm-modules --no-warnings' jest",
     "posttest": "eslint . && prettier -c ."
   },
