@@ -244,3 +244,6 @@ $RECYCLE.BIN/
 .idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,node,visualstudiocode,macos,linux,windows
+
+# used in git hooks
+.commit

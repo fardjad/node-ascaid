@@ -60,9 +60,17 @@ workflow with **ascaid**.
 
 <div class="content">
 
-![Diagram](https://kroki.io/mermaid/svg/eNpdj7FqwzAQhvc8xSEwbqH2A2QoBIfYg0NKMnQQGVTp4hy1pSCdnSHk3Ss7Timdfn7p9N2nJLmRJV7CLeUzdpguU4s9e9Wm93uSLBqvLmeo9wuAT0-MXoq1032HlucDcYQse4fVelfEoTFiBxW0IgMB_YDTfU0DfngcCK9SjAXmJo7zMylWQRNFPDxXhAn-hCnjdMYua07dhCw3WylK4qr_gk2rBufRwFb5b-Ou9j-jRA7g0Rocp8hOhH11kKJwBqFygck2cIjCpDHAC-WYw4P-NmatYiLr_DUaR-W4_Y9bdBrVtLOntkerH58ufusPNn1zTA==)
+![Diagram](https://kroki.io/mermaid/svg/eNpdj8FqwzAMhu99CmEI2aDJA_QwKClNDikb7WGH0INnq6lYYg9bSQ-l7z47ycbY6Zcs-f8_JcmdDPEG7ilfscd0kxoc2MkufTySZNU6-XWF-rgCeHfE6Bqxs2ro0fDyIM6QZXPtQ_UC291rEdajxIn0SpIGj27EaV7TiG8OR8JbI2IDSyfOy7dGbL0iCkHwE-bnmMVMaqsytll76SfLcn9oRElcDR-w7-RoHWo4SPep7c389yiRPTg0GuMWmcnhWJ0aUViNUFnPZFo4BWBS4aYnyjGH2X0dtZZBkVX-HIgDckj_wxaYIpqy5tINaNR8dPHbfgOxF3Zk)
 
 </div>
+
+</div>
+
+<div class="paragraph">
+
+*Note: This document is generated with* ***ascaid***. *Check out the
+source
+[here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
 
 </div>
 
@@ -295,7 +303,7 @@ can be found
 
 <div id="footer-text">
 
-Last updated 2021-11-21 12:51:38 +0100
+Last updated 2021-11-21 13:58:38 +0100
 
 </div>
 

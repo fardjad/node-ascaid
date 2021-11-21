@@ -1,7 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 . "$(dirname "$0")/_/husky.sh"
 
 npm test
+
 ROOT="$(dirname "$0")/.."
-node "${ROOT}/cli/ascaid.js" adoc-to-gfm "${ROOT}/adocs" "${ROOT}/docs"
-git add "${ROOT}/docs"
+DIR="$PWD"
+cd "$ROOT"
+touch ".commit"
+cd "$DIR"

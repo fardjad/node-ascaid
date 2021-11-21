@@ -40,12 +40,14 @@ The following diagram shows a typical document writing and publishing workflow w
 ....
 %%{init: {'theme':'neutral'}}%%
 graph LR
-  Writer["Document Writer"] --> ADOC
+  Writer["Document Writer"] -- Writes --> ADOC
   ADOC -- ascaid serve --> LivePreview["Live Preview"]
   ADOC["AsciiDoc Documents"] -- ascaid adoc-to-gfm --> GFM["GitHub Flavored Markdown Documents"] -- Gets rendered in --> RHS["Code Hosting Services (i.e. GitHub, GitLab, etc.)"]
 
   GFM -- ascaid gfm-to-confluence --> Confluence
 ....
+
+_Note: This document is generated with_ *_ascaid_*. _Check out the source {repo-root}/adocs/[here]._
 
 === Requirements
 . A Unix-like operating system ({WSL} is also supported)
