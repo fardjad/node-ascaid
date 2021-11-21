@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "A collection of AsciiDoc tools",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
