@@ -1,9 +1,17 @@
 :asciidoc: https://asciidoctor.org[AsciiDoc]
-:asciidoctorjs: https://docs.asciidoctor.org/asciidoctor.js/latest/[Asciidoctor.js]
-:asciidoctorjs-extensions: https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem/[Asciidoctor.js Extensions]
-:pandoc: https://pandoc.org/[Pandoc]
-:gfm: https://github.github.com/gfm/[GitHub Flavored Markdown]
-:confluence: https://www.atlassian.com/software/confluence/[Confluence]
+:asciidoctorjs-extensions: https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem[Asciidoctor.js Extensions]
+:asciidoctorjs: https://docs.asciidoctor.org/asciidoctor.js/latest[Asciidoctor.js]
+:bash: https://www.gnu.org/software/bash[Bash]
+:confluence-api-token: https://id.atlassian.com/manage/api-tokens[API token]
+:confluence: https://www.atlassian.com/software/confluence[Confluence]
+:gfm: https://github.github.com/gfm[GitHub Flavored Markdown]
+:github-actions: https://docs.github.com/actions[GitHub Actions]
+:kroki: https://github.com/Mogztter/asciidoctor-kroki[Asciidoctor Kroki Extension]
+:mit: https://opensource.org/licenses/MIT[MIT]
+:nodejs: https://nodejs.org[Node.js v16+]
+:pandoc: https://pandoc.org[Pandoc]
+:repo-root: https://github.com/fardjad/node-ascaid/tree/master
+:wsl: https://docs.microsoft.com/en-us/windows/wsl[WSL]
 
 == ascaid: a collection of AsciiDoc tools
 
@@ -26,9 +34,24 @@
 * It can convert Asciidoc files to {gfm}
 * It can publish GitHub Flavored Markdown files to {confluence}
 
+The following diagram shows a typical document writing and publishing workflow with *ascaid*.
+
+[mermaid]
+....
+%%{init: {'theme':'neutral'}}%%
+graph LR
+  Writer["Document Writer"] --> ADOC
+  ADOC -- ascaid serve --> LivePreview["Live Preview"]
+  ADOC["AsciiDoc Documents"] -- ascaid adoc-to-gfm --> GFM["GitHub Flavored Markdown Documents"] -- Gets rendered in --> RHS["Code Hosting Services (i.e. GitHub, GitLab, etc.)"]
+
+  GFM -- ascaid gfm-to-confluence --> Confluence
+....
+
 === Requirements
-. https://nodejs.org/[Node.js v16+]
-. https://pandoc.org/[Pandoc]
+. A Unix-like operating system ({WSL} is also supported)
+. {bash}
+. {nodejs}
+. {pandoc}
 
 === Installation
 
@@ -58,16 +81,16 @@ exec::[command="node ../cli/ascaid.js help gfm-to-confluence"]
 
 === Config File
 
-You can configure *ascaid* to load additional extensions by creating a file named `ascaid.config.json` in the current working directory. A working example can be found link:../examples/asciidoctor-extension[here].
+You can configure *ascaid* to load additional extensions by creating a file named `ascaid.config.json` in the current working directory. A working example can be found {repo-root}/examples/asciidoctor-extension[here].
 
-https://github.com/Mogztter/asciidoctor-kroki[Asciidoctor Kroki Extension] is included by default for convenience.
+{kroki} is included by default for convenience.
 
 === GitHub Actions Usage
 
-To publish documents to confluence you'll need to create an https://id.atlassian.com/manage/api-tokens[API token] and a root page to publish the documents under.
+To publish documents to confluence you'll need to create an {confluence-api-token} and a root page to publish the documents under.
 
-An example https://docs.github.com/actions[GitHub Actions] YAML file can be found link:../examples/github-actions-public-to-confluence/public-docs.yml[here].
+An example {github-actions} YAML file can be found {repo-root}/examples/github-actions-public-to-confluence/public-docs.yml[here].
 
 === License
 
-https://opensource.org/licenses/MIT[MIT]
+{mit}
