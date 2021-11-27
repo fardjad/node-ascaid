@@ -36,15 +36,15 @@ features:
 
 <div class="ulist">
 
-  - It can be configured to load [Asciidoctor.js
+-   It can be configured to load [Asciidoctor.js
     Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem)
 
-  - It includes a live server to help with writing AsciiDoc documents
+-   It includes a live server to help with writing AsciiDoc documents
 
-  - It can convert Asciidoc files to [GitHub Flavored
+-   It can convert Asciidoc files to [GitHub Flavored
     Markdown](https://github.github.com/gfm)
 
-  - It can publish GitHub Flavored Markdown files to
+-   It can publish GitHub Flavored Markdown files to
     [Confluence](https://www.atlassian.com/software/confluence)
 
 </div>
@@ -131,13 +131,13 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid [options] [command]
-    
+
     A collection of AsciiDoc tools
-    
+
     Options:
       -V, --version                  output the version number
       -h, --help                     display help for command
-    
+
     Commands:
       serve [directory]              start an AsciiDoc server
       adoc-to-gfm <srcDir> <outDir>  AsciiDoc -> GitHub flavored markdown
@@ -160,12 +160,12 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid-serve [options] [rootDir]
-    
+
     Start an AsciiDoc server
-    
+
     Arguments:
       rootDir        server root directory (default: current directory)
-    
+
     Options:
       -V, --version  output the version number
       -h, --help     display help for command
@@ -185,13 +185,13 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid-adoc-to-gfm [options] <srcDir> <outDir>
-    
+
     Recursively convert AsciiDoc files in a directory to GitHub flavored markdown
-    
+
     Arguments:
       srcDir                source directory
       outDir                output directory
-    
+
     Options:
       -V, --version         output the version number
       --ignore [ignore...]  glob patterns to ignore (default: ["**/_*"])
@@ -212,20 +212,31 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid-gfm-to-confluence [options] <dir>
-    
+
     Recursively publish a GitHub flavored markdown directory to Confluence
-    
+
     Arguments:
       dir                                dir to publish to Confluence
-    
+
     Options:
       -V, --version                      output the version number
-      --api-base-url [apiBaseUrl]        Confluence API base URL
-      --api-username [apiUsername]       Confluence API username
-      --api-password [apiPassword]       Confluence API password
-      --space-key [spaceKey]             Confluence space key
-      --root-page-id [rootPageId]        Confluence root page ID
-      --root-page-title [rootPageTitle]  Confluence root page title
+      --api-base-url [apiBaseUrl]        Confluence API base URL (default:
+                                         CONFLUENCE_API_BASE_URL environment
+                                         variable)
+      --api-username [apiUsername]       Confluence API username (default:
+                                         CONFLUENCE_API_USERNAME environment
+                                         variable)
+      --api-password [apiPassword]       Confluence API password (default:
+                                         CONFLUENCE_API_USERNAME environment
+                                         variable)
+      --space-key [spaceKey]             Confluence space key (default:
+                                         CONFLUENCE_SPACE_KEY environment variable)
+      --root-page-id [rootPageId]        Confluence root page ID (default:
+                                         CONFLUENCE_ROOT_PAGE_ID environment
+                                         variable)
+      --root-page-title [rootPageTitle]  Confluence root page title (default:
+                                         CONFLUENCE_ROOT_PAGE_TITLE environment
+                                         variable)
       -h, --help                         display help for command
 
 </div>
@@ -303,7 +314,7 @@ can be found
 
 <div id="footer-text">
 
-Last updated 2021-11-21 13:58:38 +0100
+Last updated 2021-11-27 22:15:12 +0100
 
 </div>
 
