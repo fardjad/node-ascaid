@@ -82,7 +82,7 @@ exec::[command="node ../cli/ascaid.js help gfm-to-confluence"]
 
 === Config File
 
-You can configure *ascaid* to load additional extensions by creating a file named `ascaid.config.json` in the current working directory. A working example can be found {repo-root}/examples/asciidoctor-extension[here].
+You can configure *ascaid* to load additional extensions by creating a file named `ascaid.config.json` in the current working directory. An example can be found {repo-root}/examples/asciidoctor-extension[here].
 
 {kroki} is included by default for convenience.
 

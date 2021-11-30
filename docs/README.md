@@ -254,8 +254,8 @@ You can install the package globally with npm:
 <div class="paragraph">
 
 You can configure **ascaid** to load additional extensions by creating a
-file named `ascaid.config.json` in the current working directory. A
-working example can be found
+file named `ascaid.config.json` in the current working directory. An
+example can be found
 [here](https://github.com/fardjad/node-ascaid/tree/master/examples/asciidoctor-extension).
 
 </div>
@@ -302,7 +302,7 @@ can be found
 
 <div id="footer-text">
 
-Last updated 2021-11-30 10:38:14 +0100
+Last updated 2021-11-30 10:41:47 +0100
 
 </div>
 
