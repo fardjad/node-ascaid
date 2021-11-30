@@ -3,9 +3,10 @@ import { promisify } from "node:util";
 import globcb from "glob";
 import path from "node:path";
 import fs from "node:fs";
-import { adocConvert } from "../lib/adoc-convert.js";
-import { pandocConvert } from "../lib/pandoc-convert.js";
-import { invokeInDir, readConfig, readVersion } from "../lib/utils.js";
+
+import { adocConvert } from "../index.js";
+import { pandocConvert } from "../index.js";
+import { invokeInDir, readConfig, readVersion } from "../index.js";
 import { registerExtensions } from "../lib/asciidoctor.js";
 
 const glob = promisify(globcb);

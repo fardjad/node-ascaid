@@ -1,8 +1,9 @@
 import path from "node:path";
 import { Argument, program } from "commander";
-import { startAsciidocServer } from "../lib/adoc-server.js";
-import { readConfig, readVersion } from "../lib/utils.js";
-import { registerExtensions } from "../lib/asciidoctor.js";
+
+import { startAsciidocServer } from "../index.js";
+import { readConfig, readVersion } from "../index.js";
+import { registerExtensions } from "../index.js";
 
 const main = async () => {
   const version = await readVersion();

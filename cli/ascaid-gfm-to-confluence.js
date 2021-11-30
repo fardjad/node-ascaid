@@ -2,9 +2,10 @@ import { Argument, Option, program } from "commander";
 import path from "node:path";
 import fs from "node:fs";
 import assert from "node:assert";
-import { pandocConvert } from "../lib/pandoc-convert.js";
-import { readVersion } from "../lib/utils.js";
-import { ConfluenceClient } from "../lib/confluence-client.js";
+
+import { pandocConvert } from "../index.js";
+import { readVersion } from "../index.js";
+import { ConfluenceClient } from "../index.js";
 
 const MD_TITLE_REGEX = /^#+\s+(.*)/;
 

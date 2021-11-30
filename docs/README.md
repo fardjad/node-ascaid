@@ -292,18 +292,6 @@ can be found
 
 </div>
 
-<div class="sect2">
-
-### License
-
-<div class="paragraph">
-
-[MIT](https://opensource.org/licenses/MIT)
-
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -314,7 +302,7 @@ can be found
 
 <div id="footer-text">
 
-Last updated 2021-11-27 22:15:12 +0100
+Last updated 2021-11-30 10:37:49 +0100
 
 </div>
 

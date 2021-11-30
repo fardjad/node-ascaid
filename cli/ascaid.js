@@ -1,6 +1,6 @@
 import { program } from "commander";
-import { readVersion } from "../lib/utils.js";
-import { checkPandoc } from "../lib/pandoc-convert.js";
+import { readVersion } from "../index.js";
+import { checkPandoc } from "../index.js";
 
 const main = async () => {
   const version = await readVersion();

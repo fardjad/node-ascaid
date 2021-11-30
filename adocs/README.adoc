@@ -7,7 +7,6 @@
 :gfm: https://github.github.com/gfm[GitHub Flavored Markdown]
 :github-actions: https://docs.github.com/actions[GitHub Actions]
 :kroki: https://github.com/Mogztter/asciidoctor-kroki[Asciidoctor Kroki Extension]
-:mit: https://opensource.org/licenses/MIT[MIT]
 :nodejs: https://nodejs.org[Node.js v16+]
 :pandoc: https://pandoc.org[Pandoc]
 :repo-root: https://github.com/fardjad/node-ascaid/tree/master
@@ -92,7 +91,3 @@ You can configure *ascaid* to load additional extensions by creating a file name
 To publish documents to confluence you'll need to create an {confluence-api-token} and a root page to publish the documents under.
 
 An example {github-actions} YAML file can be found {repo-root}/examples/github-actions-public-to-confluence/public-docs.yml[here].
-
-=== License
-
-{mit}
