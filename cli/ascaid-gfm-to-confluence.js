@@ -41,7 +41,9 @@ const createPageTree = async (title, filePath) => {
       if (firstLine != undefined) {
         title = firstLine.match(MD_TITLE_REGEX)[1].trim();
       }
-      const body = await pandocConvert(contents, "gfm", "html");
+      const body = await pandocConvert(contents, "gfm", "html", [
+        "--wrap=none",
+      ]);
       children.push({
         title,
         body,
