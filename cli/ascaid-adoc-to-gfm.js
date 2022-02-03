@@ -32,7 +32,7 @@ export const adocToGfm = async (srcDir, outDir, ignore) => {
     const html = await invokeInDir(readDir, () => {
       return adocConvert(adoc);
     });
-    const gfm = await pandocConvert(html, "html", "gfm");
+    const gfm = await pandocConvert(html, "html", "gfm", ["--wrap=none"]);
 
     const basename = path.basename(fileName);
     const fileNameWithoutExtension = basename.slice(

@@ -26,33 +26,25 @@
 
 <div class="paragraph">
 
-**ascade** is a CLI tool for writing and publishing
-[AsciiDoc](https://asciidoctor.org) files. It uses
-[Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) and
-[Pandoc](https://pandoc.org) under the hood and has the following main
-features:
+**ascade** is a CLI tool for writing and publishing [AsciiDoc](https://asciidoctor.org) files. It uses [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) and [Pandoc](https://pandoc.org) under the hood and has the following main features:
 
 </div>
 
 <div class="ulist">
 
--   It can be configured to load [Asciidoctor.js
-    Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem)
+-   It can be configured to load [Asciidoctor.js Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem)
 
 -   It includes a live server to help with writing AsciiDoc documents
 
--   It can convert Asciidoc files to [GitHub Flavored
-    Markdown](https://github.github.com/gfm)
+-   It can convert Asciidoc files to [GitHub Flavored Markdown](https://github.github.com/gfm)
 
--   It can publish GitHub Flavored Markdown files to
-    [Confluence](https://www.atlassian.com/software/confluence)
+-   It can publish GitHub Flavored Markdown files to [Confluence](https://www.atlassian.com/software/confluence)
 
 </div>
 
 <div class="paragraph">
 
-The following diagram shows a typical document writing and publishing
-workflow with **ascaid**.
+The following diagram shows a typical document writing and publishing workflow with **ascaid**.
 
 </div>
 
@@ -68,9 +60,7 @@ workflow with **ascaid**.
 
 <div class="paragraph">
 
-*Note: This document is generated with* ***ascaid***. *Check out the
-source
-[here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
+*Note: This document is generated with* ***ascaid***. *Check out the source [here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
 
 </div>
 
@@ -82,9 +72,7 @@ source
 
 <div class="olist arabic">
 
-1.  A Unix-like operating system
-    ([WSL](https://docs.microsoft.com/en-us/windows/wsl) is also
-    supported)
+1.  A Unix-like operating system ([WSL](https://docs.microsoft.com/en-us/windows/wsl) is also supported)
 
 2.  [Bash](https://www.gnu.org/software/bash)
 
@@ -253,18 +241,13 @@ You can install the package globally with npm:
 
 <div class="paragraph">
 
-You can configure **ascaid** to load additional extensions by creating a
-file named `ascaid.config.json` in the current working directory. An
-example can be found
-[here](https://github.com/fardjad/node-ascaid/tree/master/examples/asciidoctor-extension).
+You can configure **ascaid** to load additional extensions by creating a file named `ascaid.config.json` in the current working directory. An example can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/asciidoctor-extension).
 
 </div>
 
 <div class="paragraph">
 
-[Asciidoctor Kroki
-Extension](https://github.com/Mogztter/asciidoctor-kroki) is included by
-default for convenience.
+[Asciidoctor Kroki Extension](https://github.com/Mogztter/asciidoctor-kroki) is included by default for convenience.
 
 </div>
 
@@ -276,17 +259,13 @@ default for convenience.
 
 <div class="paragraph">
 
-To publish documents to confluence you’ll need to create an [API
-token](https://id.atlassian.com/manage/api-tokens) and a root page to
-publish the documents under.
+To publish documents to confluence you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under.
 
 </div>
 
 <div class="paragraph">
 
-An example [GitHub Actions](https://docs.github.com/actions) YAML file
-can be found
-[here](https://github.com/fardjad/node-ascaid/tree/master/examples/github-actions-public-to-confluence/public-docs.yml).
+An example [GitHub Actions](https://docs.github.com/actions) YAML file can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/github-actions-public-to-confluence/public-docs.yml).
 
 </div>
 
@@ -302,7 +281,7 @@ can be found
 
 <div id="footer-text">
 
-Last updated 2021-11-30 10:42:01 +0100
+Last updated 2022-02-03 15:29:45 +0100
 
 </div>
 

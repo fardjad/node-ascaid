@@ -16,7 +16,8 @@ const isNotNullOrEmptyString = (string_) => {
 };
 
 const createPageTree = async (title, filePath) => {
-  const files = (await fs.promises.readdir(filePath)).map((file) => ({
+  const dirContents = await fs.promises.readdir(filePath);
+  const files = dirContents.map((file) => ({
     name: file,
     extension: path.extname(file),
     path: `${filePath}/${file}`,
