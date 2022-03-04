@@ -5,7 +5,6 @@
 :confluence-api-token: https://id.atlassian.com/manage/api-tokens[API token]
 :confluence: https://www.atlassian.com/software/confluence[Confluence]
 :gfm: https://github.github.com/gfm[GitHub Flavored Markdown]
-:github-actions: https://docs.github.com/actions[GitHub Actions]
 :kroki: https://github.com/Mogztter/asciidoctor-kroki[Asciidoctor Kroki Extension]
 :nodejs: https://nodejs.org[Node.js v16+]
 :pandoc: https://pandoc.org[Pandoc]
@@ -28,7 +27,7 @@ has the following main features:
 
 The following diagram shows a typical document writing and publishing workflow with *ascaid*.
 
-[mermaid]
+[mermaid,format=png]
 ....
 %%{init: {'theme':'dark'}}%%
 
@@ -94,4 +93,4 @@ working directory. An example can be found {repo-root}/examples/asciidoctor-exte
 === GitHub Actions Usage
 
 To publish documents to {confluence} you'll need to create an {confluence-api-token} and a root page to publish the
-documents under. An example {github-actions} project can be found {repo-root}/examples/github-actions-publish-to-confluence[here].
+documents under. An example project can be found {repo-root}/examples/github-actions-publish-to-confluence[here].

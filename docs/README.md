@@ -42,7 +42,7 @@ The following diagram shows a typical document writing and publishing workflow w
 
 <div class="content">
 
-![Diagram](https://kroki.io/mermaid/svg/eNpdUctuwjAQvOcrVpbStFLDB3CohIIgB1Crcugh4uDYS1hBbGQ74YD4966T0FY97cPrmdnZNL2RoTCHWxaO2GI2z7R0p-x-T9MkaZy8HGHzmQB8OQroKrG0qmvRhKkh9pDnY-45e4PF8r3g8Rjii_RKkgaPrsfhfUM9fjjsCa-ViAVMldhP3yqx8IqIieBB5keaCUxqq_Jg8-bQDpDr1bYSawplV8PqLHvrUMOWt9D2av5jrDF4cGg0xikyA0JR7ipRWI1QWh_INLBjwaR4p2ea4QxG9NcYN5IjBjV7YcUsmdn_aGNNUZqy5nDu0Khx6eKnTJI0hVKqEwQLrTwhsO2gSbLVLbQsHXryVJ8xaoungJqnG2c7o33iu3q8yZOp_YXZH4cZ0sn7QdMQea8h_jF97P_qYSe-AQO3ofs=)
+![Diagram](https://kroki.io/mermaid/png/eNpdUctuwjAQvOcrVpbStFLDB3CohIIgB1Crcugh4uDYS1hBbGQ74YD4966T0FY97cPrmdnZNL2RoTCHWxaO2GI2z7R0p-x-T9MkaZy8HGHzmQB8OQroKrG0qmvRhKkh9pDnY-45e4PF8r3g8Rjii_RKkgaPrsfhfUM9fjjsCa-ViAVMldhP3yqx8IqIieBB5keaCUxqq_Jg8-bQDpDr1bYSawplV8PqLHvrUMOWt9D2av5jrDF4cGg0xikyA0JR7ipRWI1QWh_INLBjwaR4p2ea4QxG9NcYN5IjBjV7YcUsmdn_aGNNUZqy5nDu0Khx6eKnTJI0hVKqEwQLrTwhsO2gSbLVLbQsHXryVJ8xaoungJqnG2c7o33iu3q8yZOp_YXZH4cZ0sn7QdMQea8h_jF97P_qYSe-AQO3ofs=)
 
 </div>
 
@@ -249,7 +249,7 @@ You can configure **ascaid** to load additional extensions by creating a file na
 
 <div class="paragraph">
 
-To publish documents to [Confluence](https://www.atlassian.com/software/confluence) you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under. An example [GitHub Actions](https://docs.github.com/actions) project can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/github-actions-publish-to-confluence).
+To publish documents to [Confluence](https://www.atlassian.com/software/confluence) you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under. An example project can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/github-actions-publish-to-confluence).
 
 </div>
 
@@ -265,7 +265,7 @@ To publish documents to [Confluence](https://www.atlassian.com/software/confluen
 
 <div id="footer-text">
 
-Last updated 2022-03-04 21:28:26 +0100
+Last updated 2022-03-04 21:36:35 +0100
 
 </div>
 
