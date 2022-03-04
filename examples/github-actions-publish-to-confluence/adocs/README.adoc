@@ -1,0 +1,28 @@
+== Example Project with ascaid
+
+The documentation of this project is generated with *ascaid*. Once Git hooks are installed, committing the changes in
+the repository will compile the project, convert all AsciiDoc files located in `adocs` directory to GitHub Flavored
+Markdown format, and place them in `docs` directory.
+
+=== Getting Started
+
+==== Requirements
+* A unix-like operating system (WSL is also supported)
+* Git
+* Node.js 16.x (and npm 8.x)
+* Pandoc
+
+==== Instructions
+. Clone the repository
+. Run `npm install`
+. Run `npm run ascaid:serve` to start ascaid server
+. Run `npm run ascaid:gfm` to generate GitHub Flavored Markdown files
+
+=== Example Graph
+
+[graphviz]
+....
+digraph G {
+  Hello->World
+}
+....

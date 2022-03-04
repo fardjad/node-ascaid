@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+set -ex
+
+ROOT="$(dirname "$0")/.."
+
+npm run ascaid:gfm
+git add docs
+
+DIR="$PWD"
+cd "$ROOT"
+touch ".commit"
+cd "$DIR"

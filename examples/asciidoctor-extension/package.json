@@ -1,10 +1,10 @@
 {
-  "name": "asciidoctor-extension",
+  "name": "ascaid-asciidoctor-extensions-example",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
+  "license": "UNLICENSED",
+  "description": "Example usage of ascaid with Asciidoctor extensions",
   "dependencies": {
-    "ascaid": "^1.1.0",
+    "ascaid": "*",
     "make-synchronous": "^1.0.0",
     "widdershins": "^4.0.1",
     "yaml": "^1.10.2"

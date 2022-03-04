@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+ROOT="$(dirname "$0")/.."
+DIR="$PWD"
+cd "$ROOT"
+if [ -f .commit ]; then
+    rm .commit
+
+    git commit --amend -C HEAD --no-verify
+fi
+cd "$DIR"

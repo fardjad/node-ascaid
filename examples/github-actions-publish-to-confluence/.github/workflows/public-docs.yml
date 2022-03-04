@@ -1,0 +1,60 @@
+---
+name: publish-docs
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "docs/**"
+    branches:
+      - master
+env:
+  PANDOC_VERSION: 2.17.1
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@main
+      - name: Cache node modules
+        uses: actions/cache@main
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Cache pandoc
+        id: cache-pandoc
+        uses: actions/cache@main
+        with:
+          path: ~/.pandoc
+          key: ${{ runner.os }}-pandoc-${{ env.PANDOC_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-pandoc-
+      - name: Download pandoc
+        if: steps.cache-pandoc.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          mkdir -p ~/.pandoc/
+          curl -SsLo ~/.pandoc/pandoc.deb https://github.com/jgm/pandoc/releases/download/${{ env.PANDOC_VERSION }}/pandoc-${{ env.PANDOC_VERSION }}-1-amd64.deb
+      - uses: actions/setup-node@main
+        with:
+          node-version: "16.x"
+          registry-url: "https://npm.pkg.github.com"
+      - name: Install dependencies
+        run: |
+          set -e
+          sudo dpkg -i ~/.pandoc/pandoc.deb
+          npm ci
+      - name: Publish the docs
+        run: |
+          set -e
+          npx ascaid gfm-to-confluence ./docs
+        env:
+          CONFLUENCE_API_BASE_URL: https://<SUBDOMAIN>.atlassian.net/wiki/rest/api
+          CONFLUENCE_API_USERNAME: <YOUR_USERNAME>
+          CONFLUENCE_API_PASSWORD: ${{ secrets.CONFLUENCE_API_PASSWORD }}
+          CONFLUENCE_SPACE_KEY: <SPACE_KEY>
+          CONFLUENCE_ROOT_PAGE_ID: <ROOT_PAGE_ID>
+          CONFLUENCE_ROOT_PAGE_TITLE: ascaid

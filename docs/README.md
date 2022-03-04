@@ -6,19 +6,9 @@
 
 <div class="sect1">
 
-## ascaid: a collection of AsciiDoc tools
+## ascaid: Hassle-free documentation generation powered by AsciiDoc
 
 <div class="sectionbody">
-
-<div class="imageblock kroki">
-
-<div class="content">
-
-![Diagram](https://kroki.io/svgbob/svg/eNpNTcENwEAI-t8ULNC6EIkdxOErYpPGBAQ5DshMQNhsHOV96SCQYKP04KjGaoEWOtQJRBIknuu6S3nGeihPt_lNTWgOkLLngcpWBPVlQMQvUO1MWR6mFqWUM633c14_tUAd)
-
-</div>
-
-</div>
 
 <div class="sect2">
 
@@ -26,7 +16,7 @@
 
 <div class="paragraph">
 
-**ascade** is a CLI tool for writing and publishing [AsciiDoc](https://asciidoctor.org) files. It uses [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) and [Pandoc](https://pandoc.org) under the hood and has the following main features:
+**ascaid** makes it easy to write partially-generated documentation in AsciiDoc format. Generating the documentation can help with reducing [documentation CRUFT](http://agilemodeling.com/essays/agileDocumentation.htm). It uses [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) and [Pandoc](https://pandoc.org) under the hood and has the following main features:
 
 </div>
 
@@ -52,7 +42,7 @@ The following diagram shows a typical document writing and publishing workflow w
 
 <div class="content">
 
-![Diagram](https://kroki.io/mermaid/svg/eNpdj8FqwzAMhu99CmEI2aDJA_QwKClNDikb7WGH0INnq6lYYg9bSQ-l7z47ycbY6Zcs-f8_JcmdDPEG7ilfscd0kxoc2MkufTySZNU6-XWF-rgCeHfE6Bqxs2ro0fDyIM6QZXPtQ_UC291rEdajxIn0SpIGj27EaV7TiG8OR8JbI2IDSyfOy7dGbL0iCkHwE-bnmMVMaqsytll76SfLcn9oRElcDR-w7-RoHWo4SPep7c389yiRPTg0GuMWmcnhWJ0aUViNUFnPZFo4BWBS4aYnyjGH2X0dtZZBkVX-HIgDckj_wxaYIpqy5tINaNR8dPHbfgOxF3Zk)
+![Diagram](https://kroki.io/mermaid/svg/eNpdUctuwjAQvOcrVpbStFLDB3CohIIgB1Crcugh4uDYS1hBbGQ74YD4966T0FY97cPrmdnZNL2RoTCHWxaO2GI2z7R0p-x-T9MkaZy8HGHzmQB8OQroKrG0qmvRhKkh9pDnY-45e4PF8r3g8Rjii_RKkgaPrsfhfUM9fjjsCa-ViAVMldhP3yqx8IqIieBB5keaCUxqq_Jg8-bQDpDr1bYSawplV8PqLHvrUMOWt9D2av5jrDF4cGg0xikyA0JR7ipRWI1QWh_INLBjwaR4p2ea4QxG9NcYN5IjBjV7YcUsmdn_aGNNUZqy5nDu0Khx6eKnTJI0hVKqEwQLrTwhsO2gSbLVLbQsHXryVJ8xaoungJqnG2c7o33iu3q8yZOp_YXZH4cZ0sn7QdMQea8h_jF97P_qYSe-AQO3ofs=)
 
 </div>
 
@@ -60,7 +50,7 @@ The following diagram shows a typical document writing and publishing workflow w
 
 <div class="paragraph">
 
-*Note: This document is generated with* ***ascaid***. *Check out the source [here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
+*Note: This document is generated with* ***ascaid*** itself. *Check out the source [here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
 
 </div>
 
@@ -259,13 +249,7 @@ You can configure **ascaid** to load additional extensions by creating a file na
 
 <div class="paragraph">
 
-To publish documents to confluence you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under.
-
-</div>
-
-<div class="paragraph">
-
-An example [GitHub Actions](https://docs.github.com/actions) YAML file can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/github-actions-public-to-confluence/public-docs.yml).
+To publish documents to [Confluence](https://www.atlassian.com/software/confluence) you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under. An example [GitHub Actions](https://docs.github.com/actions) project can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/github-actions-publish-to-confluence).
 
 </div>
 
@@ -281,7 +265,7 @@ An example [GitHub Actions](https://docs.github.com/actions) YAML file can be fo
 
 <div id="footer-text">
 
-Last updated 2022-03-04 19:56:27 +0100
+Last updated 2022-03-04 21:28:10 +0100
 
 </div>
 

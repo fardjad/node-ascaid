@@ -1,0 +1,19 @@
+{
+  "name": "ascaid-publish-example",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "description": "Example usage of ascaid for publishing documentation",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "ascaid": "*"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "ascaid:serve": "ascaid serve",
+    "ascaid:gfm": "ascaid adoc-to-gfm ./adocs ./docs"
+  },
+  "engines": {
+    "node": "16",
+    "npm": "8"
+  }
+}

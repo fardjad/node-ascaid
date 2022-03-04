@@ -1,3 +1,3 @@
 {
-  "extensions": ["./adoc-oas-extension.js"]
+  "extensions": ["./adoc-oas-extension.mjs"]
 }
