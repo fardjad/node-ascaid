@@ -25,7 +25,7 @@ export const adocToGfm = async (srcDir, outDir, ignore) => {
     await fs.promises.mkdir(writeDir, { recursive: true });
 
     const adoc = await fs.promises.readFile(path.join(srcDir, fileName), {
-      encoding: "utf-8",
+      encoding: "utf8",
     });
 
     const readDir = path.join(srcDir, dirname);
@@ -42,7 +42,7 @@ export const adocToGfm = async (srcDir, outDir, ignore) => {
     await fs.promises.writeFile(
       path.join(writeDir, `${fileNameWithoutExtension}.md`),
       gfm,
-      { encoding: "utf-8" }
+      { encoding: "utf8" }
     );
   }
 };

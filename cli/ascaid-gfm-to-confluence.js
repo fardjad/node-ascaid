@@ -29,7 +29,7 @@ const createPageTree = async (title, filePath) => {
   for (const file of files) {
     if (!file.isDirectory) {
       if (file.extension.toLowerCase() !== ".md") continue;
-      const contents = fs.readFileSync(file.path, { encoding: "utf-8" });
+      const contents = fs.readFileSync(file.path, { encoding: "utf8" });
 
       let title = file.name.slice(
         0,

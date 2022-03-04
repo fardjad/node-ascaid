@@ -37,21 +37,21 @@
   "dependencies": {
     "@asciidoctor/core": "^2.2.6",
     "asciidoctor-kroki": "^0.15.4",
-    "axios": "^0.25.0",
+    "axios": "^0.26.0",
     "browser-sync": "^2.27.7",
     "commander": "^9.0.0",
     "cross-env": "^7.0.3",
-    "execa": "^6.0.0",
+    "execa": "^6.1.0",
     "glob": "^7.2.0"
   },
   "repository": "git@github.com:fardjad/node-ascaid.git",
   "devDependencies": {
-    "eslint": "^8.8.0",
+    "eslint": "^8.10.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-unicorn": "^40.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-unicorn": "^41.0.0",
     "husky": "^7.0.4",
-    "jest": "^27.4.7",
+    "jest": "^27.5.1",
     "prettier": "^2.5.1"
   }
 }
