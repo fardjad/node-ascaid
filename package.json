@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
