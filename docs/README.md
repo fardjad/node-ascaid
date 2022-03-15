@@ -30,7 +30,7 @@
 
 <div class="content">
 
-<img src="../media/diagram-example.png" style="width:80.0%" alt="diagram example" />
+<img src="https://github.com/fardjad/node-ascaid/blob/master/media/diagram-example.png?raw=true" style="width:80.0%" alt="diagram example" />
 
 </div>
 
@@ -46,7 +46,7 @@
 
 <div class="content">
 
-<img src="../media/custom-extension-example.png" style="width:80.0%" alt="custom extension example" />
+<img src="https://github.com/fardjad/node-ascaid/blob/master/media/custom-extension-example.png?raw=true" style="width:80.0%" alt="custom extension example" />
 
 </div>
 
@@ -56,7 +56,7 @@
 
 <div class="content">
 
-<img src="../media/exec-extension-example.png" style="width:80.0%" alt="exec extension example" />
+<img src="https://github.com/fardjad/node-ascaid/blob/master/media/exec-extension-example.png?raw=true" style="width:80.0%" alt="exec extension example" />
 
 </div>
 
@@ -116,7 +116,7 @@ The following diagram shows a typical document writing and publishing workflow w
 
 <div class="paragraph">
 
-*Note: This document is generated with* ***ascaid*** *itself.* *Check out the source [here](./README.adoc).*
+*Note: This document is generated with* ***ascaid*** *itself.* *Check out the source [here](https://github.com/fardjad/node-ascaid/blob/master/adocs/README.adoc).*
 
 </div>
 
@@ -344,7 +344,7 @@ You can optionally use a config file to register custom extensions and set [Asci
 
 <div class="paragraph">
 
-An example implementation of a custom extension can be found [here](../examples/asciidoctor-extension).
+An example implementation of a custom extension can be found [here](https://github.com/fardjad/node-ascaid/blob/master/examples/asciidoctor-extension).
 
 </div>
 
@@ -356,7 +356,7 @@ An example implementation of a custom extension can be found [here](../examples/
 
 <div class="paragraph">
 
-In order to publish [AsciiDoc](https://asciidoctor.org) documents to [Confluence](https://www.atlassian.com/software/confluence), you should first convert them to [GitHub Flavored Markdown](https://github.github.com/gfm) (see [CLI Usage](#_cli_usage) for more info). Then you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under. An example project with GitHub Actions integration can be found [here](../examples/github-actions-publish-to-confluence).
+In order to publish [AsciiDoc](https://asciidoctor.org) documents to [Confluence](https://www.atlassian.com/software/confluence), you should first convert them to [GitHub Flavored Markdown](https://github.github.com/gfm) (see [CLI Usage](#_cli_usage) for more info). Then you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under. An example project with GitHub Actions integration can be found [here](https://github.com/fardjad/node-ascaid/blob/master/examples/github-actions-publish-to-confluence).
 
 </div>
 
@@ -372,7 +372,7 @@ In order to publish [AsciiDoc](https://asciidoctor.org) documents to [Confluence
 
 <div id="footer-text">
 
-Last updated 2022-03-15 16:38:39 +0100
+Last updated 2022-03-15 16:55:00 +0100
 
 </div>
 

@@ -10,6 +10,7 @@
 :pandoc: https://pandoc.org[Pandoc]
 :wsl: https://docs.microsoft.com/en-us/windows/wsl[WSL]
 :agiledocumentation: http://agilemodeling.com/essays/agileDocumentation.htm
+:repo-root-master: https://github.com/fardjad/node-ascaid/blob/master
 
 == ascaid: Hassle-free documentation generation powered by AsciiDoc
 
@@ -19,22 +20,22 @@
 
 ⚡️ Include text-based diagrams in your documents:
 
-image::../media/diagram-example.png[width=80%]
+image::{repo-root-master}/media/diagram-example.png?raw=true[width=80%]
 
 ⚡️ Extend AsciiDoc with custom extensions:
 
-image::../media/custom-extension-example.png[width=80%]
-image::../media/exec-extension-example.png[width=80%]
+image::{repo-root-master}/media/custom-extension-example.png?raw=true[width=80%]
+image::{repo-root-master}/media/exec-extension-example.png?raw=true[width=80%]
 
 ⚡️ Publish your documents to Confluence and code hosting services
 
 === Longer Description
 
-*ascaid* makes it easy to write partially-generated documentation in AsciiDoc 
-format. Generating the documentation can help with reducing 
-{agiledocumentation}[documentation CRUFT]. 
+*ascaid* makes it easy to write partially-generated documentation in AsciiDoc
+format. Generating the documentation can help with reducing
+{agiledocumentation}[documentation CRUFT].
 
-Under the hood, *ascaid* uses {asciidoctorjs} and {pandoc} and offers the 
+Under the hood, *ascaid* uses {asciidoctorjs} and {pandoc} and offers the
 following main features:
 
 * It can be configured to load {asciidoctorjs-extensions}
@@ -42,7 +43,7 @@ following main features:
 * It can convert Asciidoc files to {gfm}
 * It can publish GitHub Flavored Markdown files to {confluence}
 
-The following diagram shows a typical document writing and publishing workflow 
+The following diagram shows a typical document writing and publishing workflow
 with *ascaid*.
 
 [mermaid,format=png]
@@ -67,8 +68,8 @@ subgraph &nbsp
 end
 ....
 
-_Note: This document is generated with_ *_ascaid_* _itself._ _Check out the 
-source link:./README.adoc[here]._
+_Note: This document is generated with_ *_ascaid_* _itself._ _Check out the
+source link:{repo-root-master}/adocs/README.adoc[here]._
 
 === Installation
 
@@ -105,9 +106,9 @@ exec::[command="node ../cli/ascaid.js help gfm-to-confluence"]
 
 === Config File
 
-You can optionally use a config file to register custom extensions and 
-set {asciidoctorjs} options. On startup, *ascaid* looks for a config file named 
-`ascaid.config.json` in the current working directory. The following block 
+You can optionally use a config file to register custom extensions and
+set {asciidoctorjs} options. On startup, *ascaid* looks for a config file named
+`ascaid.config.json` in the current working directory. The following block
 shows an example config file:
 
 
@@ -130,16 +131,16 @@ shows an example config file:
 
 *ascaid* supports {asciidoctorjs-extensions}.
 
-{kroki} is included by default to make it more convenient to use *ascaid* 
+{kroki} is included by default to make it more convenient to use *ascaid*
 without a config file.
 
-An example implementation of a custom extension can be found 
-link:../examples/asciidoctor-extension[here].
+An example implementation of a custom extension can be found
+link:{repo-root-master}/examples/asciidoctor-extension[here].
 
 === Publishing Documents to Confluence
 
-In order to publish {asciidoc} documents to {confluence}, you should first 
-convert them to {gfm} (see <<_cli_usage>> for more info). Then you'll need to 
-create an {confluence-api-token} and a root page to publish the documents 
-under. An example project with GitHub Actions integration can be found 
-link:../examples/github-actions-publish-to-confluence[here].
+In order to publish {asciidoc} documents to {confluence}, you should first
+convert them to {gfm} (see <<_cli_usage>> for more info). Then you'll need to
+create an {confluence-api-token} and a root page to publish the documents
+under. An example project with GitHub Actions integration can be found
+link:{repo-root-master}/examples/github-actions-publish-to-confluence[here].
