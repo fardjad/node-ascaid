@@ -313,7 +313,9 @@ You can optionally use a config file to register custom extensions and set [Asci
 
   // https://docs.asciidoctor.org/asciidoctor/latest/api/options/
   "asciidoctorOptions": {
+    // https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/
     "attributes": {
+      "nofooter": true,
       "kroki-server-url": "http://my-server-url:port"
     }
   }
@@ -363,16 +365,6 @@ In order to publish [AsciiDoc](https://asciidoctor.org) documents to [Confluence
 </div>
 
 </div>
-
-</div>
-
-</div>
-
-<div id="footer">
-
-<div id="footer-text">
-
-Last updated 2022-03-15 16:55:17 +0100
 
 </div>
 

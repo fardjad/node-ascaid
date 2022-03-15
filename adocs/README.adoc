@@ -1,3 +1,4 @@
+:nofooter:
 :asciidoc: https://asciidoctor.org[AsciiDoc]
 :asciidoctorjs-extensions: https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem[Asciidoctor.js Extensions]
 :asciidoctorjs: https://docs.asciidoctor.org/asciidoctor.js/latest[Asciidoctor.js]
@@ -120,7 +121,9 @@ shows an example config file:
 
   // https://docs.asciidoctor.org/asciidoctor/latest/api/options/
   "asciidoctorOptions": {
+    // https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/
     "attributes": {
+      "nofooter": true,
       "kroki-server-url": "http://my-server-url:port"
     }
   }
