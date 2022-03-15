@@ -12,11 +12,77 @@
 
 <div class="sect2">
 
-### Description
+### TL;DR
 
 <div class="paragraph">
 
-**ascaid** makes it easy to write partially-generated documentation in AsciiDoc format. Generating the documentation can help with reducing [documentation CRUFT](http://agilemodeling.com/essays/agileDocumentation.htm). It uses [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) and [Pandoc](https://pandoc.org) under the hood and has the following main features:
+⚡️ Write documents in [AsciiDoc](https://asciidoctor.org) format
+
+</div>
+
+<div class="paragraph">
+
+⚡️ Include text-based diagrams in your documents:
+
+</div>
+
+<div class="imageblock">
+
+<div class="content">
+
+<img src="../media/diagram-example.png" style="width:80.0%" alt="diagram example" />
+
+</div>
+
+</div>
+
+<div class="paragraph">
+
+⚡️ Extend AsciiDoc with custom extensions:
+
+</div>
+
+<div class="imageblock">
+
+<div class="content">
+
+<img src="../media/custom-extension-example.png" style="width:80.0%" alt="custom extension example" />
+
+</div>
+
+</div>
+
+<div class="imageblock">
+
+<div class="content">
+
+<img src="../media/exec-extension-example.png" style="width:80.0%" alt="exec extension example" />
+
+</div>
+
+</div>
+
+<div class="paragraph">
+
+⚡️ Publish your documents to Confluence and code hosting services
+
+</div>
+
+</div>
+
+<div class="sect2">
+
+### Longer Description
+
+<div class="paragraph">
+
+**ascaid** makes it easy to write partially-generated documentation in AsciiDoc format. Generating the documentation can help with reducing [documentation CRUFT](http://agilemodeling.com/essays/agileDocumentation.htm).
+
+</div>
+
+<div class="paragraph">
+
+Under the hood, **ascaid** uses [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) and [Pandoc](https://pandoc.org) and offers the following main features:
 
 </div>
 
@@ -50,7 +116,7 @@ The following diagram shows a typical document writing and publishing workflow w
 
 <div class="paragraph">
 
-*Note: This document is generated with* ***ascaid*** itself. *Check out the source [here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
+*Note: This document is generated with* ***ascaid*** *itself.* *Check out the source [here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
 
 </div>
 
@@ -58,7 +124,11 @@ The following diagram shows a typical document writing and publishing workflow w
 
 <div class="sect2">
 
-### Requirements
+### Installation
+
+<div class="sect3">
+
+#### Requirements
 
 <div class="olist arabic">
 
@@ -71,12 +141,6 @@ The following diagram shows a typical document writing and publishing workflow w
 4.  [Pandoc](https://pandoc.org)
 
 </div>
-
-</div>
-
-<div class="sect2">
-
-### Installation
 
 <div class="paragraph">
 
@@ -96,9 +160,11 @@ You can install the package globally with npm:
 
 </div>
 
+</div>
+
 <div class="sect2">
 
-### Commands
+### CLI Usage
 
 <div class="sect3">
 
@@ -110,7 +176,7 @@ You can install the package globally with npm:
 
     Usage: ascaid [options] [command]
 
-    A collection of AsciiDoc tools
+    Hassle-free documentation generation powered by AsciiDoc
 
     Options:
       -V, --version                  output the version number
@@ -265,7 +331,7 @@ To publish documents to [Confluence](https://www.atlassian.com/software/confluen
 
 <div id="footer-text">
 
-Last updated 2022-03-04 21:36:35 +0100
+Last updated 2022-03-15 12:57:10 +0100
 
 </div>
 

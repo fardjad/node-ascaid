@@ -14,18 +14,37 @@
 
 == ascaid: Hassle-free documentation generation powered by AsciiDoc
 
-=== Description
+=== TL;DR
 
-*ascaid* makes it easy to write partially-generated documentation in AsciiDoc format. Generating the documentation can
-help with reducing {agiledocumentation}[documentation CRUFT]. It uses {asciidoctorjs} and {pandoc} under the hood and
-has the following main features:
+⚡️ Write documents in {asciidoc} format
+
+⚡️ Include text-based diagrams in your documents:
+
+image::../media/diagram-example.png[width=80%]
+
+⚡️ Extend AsciiDoc with custom extensions:
+
+image::../media/custom-extension-example.png[width=80%]
+image::../media/exec-extension-example.png[width=80%]
+
+⚡️ Publish your documents to Confluence and code hosting services
+
+=== Longer Description
+
+*ascaid* makes it easy to write partially-generated documentation in AsciiDoc 
+format. Generating the documentation can help with reducing 
+{agiledocumentation}[documentation CRUFT]. 
+
+Under the hood, *ascaid* uses {asciidoctorjs} and {pandoc} and offers the 
+following main features:
 
 * It can be configured to load {asciidoctorjs-extensions}
 * It includes a live server to help with writing AsciiDoc documents
 * It can convert Asciidoc files to {gfm}
 * It can publish GitHub Flavored Markdown files to {confluence}
 
-The following diagram shows a typical document writing and publishing workflow with *ascaid*.
+The following diagram shows a typical document writing and publishing workflow 
+with *ascaid*.
 
 [mermaid,format=png]
 ....
@@ -49,15 +68,17 @@ subgraph &nbsp
 end
 ....
 
-_Note: This document is generated with_ *_ascaid_* itself. _Check out the source {repo-root}/adocs/[here]._
+_Note: This document is generated with_ *_ascaid_* _itself._ _Check out the 
+source {repo-root}/adocs/[here]._
 
-=== Requirements
+=== Installation
+
+==== Requirements
+
 . A Unix-like operating system ({WSL} is also supported)
 . {bash}
 . {nodejs}
 . {pandoc}
-
-=== Installation
 
 You can install the package globally with npm:
 
@@ -65,7 +86,7 @@ You can install the package globally with npm:
 npm install -g ascaid
 ----
 
-=== Commands
+=== CLI Usage
 
 ==== `ascaid help`
 
@@ -85,12 +106,15 @@ exec::[command="node ../cli/ascaid.js help gfm-to-confluence"]
 
 === Config File
 
-You can configure *ascaid* to load additional extensions by creating a file named `ascaid.config.json` in the current
-working directory. An example can be found {repo-root}/examples/asciidoctor-extension[here].
+You can configure *ascaid* to load additional extensions by creating a file 
+named `ascaid.config.json` in the current working directory. An example can 
+be found {repo-root}/examples/asciidoctor-extension[here].
 
 {kroki} is included by default for convenience.
 
 === GitHub Actions Usage
 
-To publish documents to {confluence} you'll need to create an {confluence-api-token} and a root page to publish the
-documents under. An example project can be found {repo-root}/examples/github-actions-publish-to-confluence[here].
+To publish documents to {confluence} you'll need to create an 
+{confluence-api-token} and a root page to publish the
+documents under. An example project can be 
+found {repo-root}/examples/github-actions-publish-to-confluence[here].

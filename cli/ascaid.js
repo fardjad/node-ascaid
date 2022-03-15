@@ -9,7 +9,7 @@ const main = async () => {
 
   program
     .version(version)
-    .description("A collection of AsciiDoc tools")
+    .description("Hassle-free documentation generation powered by AsciiDoc")
     .command("serve [directory]", "start an AsciiDoc server")
     .command(
       "adoc-to-gfm <srcDir> <outDir>",
