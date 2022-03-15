@@ -11,7 +11,7 @@ import { registerExtensions } from "../lib/asciidoctor.js";
 
 const glob = promisify(globcb);
 
-export const adocToGfm = async (srcDir, outDir, ignore) => {
+export const adocToGfm = async (srcDir, outDir, ignore, adoctorOptions) => {
   const matches = await glob("**/*.{asciidoc,adoc,asc}", {
     nocase: true,
     cwd: srcDir,
@@ -30,7 +30,7 @@ export const adocToGfm = async (srcDir, outDir, ignore) => {
 
     const readDir = path.join(srcDir, dirname);
     const html = await invokeInDir(readDir, () => {
-      return adocConvert(adoc);
+      return adocConvert(adoc, adoctorOptions);
     });
     const gfm = await pandocConvert(html, "html", "gfm", ["--wrap=none"]);
 
@@ -63,10 +63,11 @@ const main = async () => {
       "Recursively convert AsciiDoc files in a directory to GitHub flavored markdown"
     )
     .action(async (srcDir, outDir, { ignore }) => {
-      const config = await readConfig();
-      await registerExtensions(config.extensions, path.resolve("."));
+      const { extensions, asciidoctorOptions: adoctorOptions } =
+        await readConfig();
+      await registerExtensions(extensions, path.resolve("."));
 
-      await adocToGfm(srcDir, outDir, ignore);
+      await adocToGfm(srcDir, outDir, ignore, adoctorOptions);
     });
 
   await program.parseAsync(process.argv);

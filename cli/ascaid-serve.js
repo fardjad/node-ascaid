@@ -18,10 +18,11 @@ const main = async () => {
     )
     .description("Start an AsciiDoc server")
     .action(async (rootDir) => {
-      const config = await readConfig();
-      await registerExtensions(config.extensions, path.resolve("."));
+      const { extensions, asciidoctorOptions: adoctorOptions } =
+        await readConfig();
+      await registerExtensions(extensions, path.resolve("."));
 
-      await startAsciidocServer(rootDir);
+      await startAsciidocServer(rootDir, adoctorOptions);
     });
 
   await program.parseAsync(process.argv);

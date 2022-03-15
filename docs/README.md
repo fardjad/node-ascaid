@@ -116,7 +116,7 @@ The following diagram shows a typical document writing and publishing workflow w
 
 <div class="paragraph">
 
-*Note: This document is generated with* ***ascaid*** *itself.* *Check out the source [here](https://github.com/fardjad/node-ascaid/tree/master/adocs/).*
+*Note: This document is generated with* ***ascaid*** *itself.* *Check out the source [here](./README.adoc).*
 
 </div>
 
@@ -297,13 +297,30 @@ You can install the package globally with npm:
 
 <div class="paragraph">
 
-You can configure **ascaid** to load additional extensions by creating a file named `ascaid.config.json` in the current working directory. An example can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/asciidoctor-extension).
+You can optionally use a config file to register custom extensions and set [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) options. On startup, **ascaid** looks for a config file named `ascaid.config.json` in the current working directory. The following block shows an example config file:
 
 </div>
 
-<div class="paragraph">
+<div class="listingblock">
 
-[Asciidoctor Kroki Extension](https://github.com/Mogztter/asciidoctor-kroki) is included by default for convenience.
+<div class="content">
+
+``` highlight
+{
+  // JSON comments will be striped out
+
+  "extensions": ["./path/to/extension.js"],
+
+  // https://docs.asciidoctor.org/asciidoctor/latest/api/options/
+  "asciidoctorOptions": {
+    "attributes": {
+      "kroki-server-url": "http://my-server-url:port"
+    }
+  }
+}
+```
+
+</div>
 
 </div>
 
@@ -311,11 +328,35 @@ You can configure **ascaid** to load additional extensions by creating a file na
 
 <div class="sect2">
 
-### GitHub Actions Usage
+### Extensions
 
 <div class="paragraph">
 
-To publish documents to [Confluence](https://www.atlassian.com/software/confluence) you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under. An example project can be found [here](https://github.com/fardjad/node-ascaid/tree/master/examples/github-actions-publish-to-confluence).
+**ascaid** supports [Asciidoctor.js Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem).
+
+</div>
+
+<div class="paragraph">
+
+[Asciidoctor Kroki Extension](https://github.com/Mogztter/asciidoctor-kroki) is included by default to make it more convenient to use **ascaid** without a config file.
+
+</div>
+
+<div class="paragraph">
+
+An example implementation of a custom extension can be found [here](../examples/asciidoctor-extension).
+
+</div>
+
+</div>
+
+<div class="sect2">
+
+### Publishing Documents to Confluence
+
+<div class="paragraph">
+
+In order to publish [AsciiDoc](https://asciidoctor.org) documents to [Confluence](https://www.atlassian.com/software/confluence), you should first convert them to [GitHub Flavored Markdown](https://github.github.com/gfm) (see [CLI Usage](#_cli_usage) for more info). Then you’ll need to create an [API token](https://id.atlassian.com/manage/api-tokens) and a root page to publish the documents under. An example project with GitHub Actions integration can be found [here](../examples/github-actions-publish-to-confluence).
 
 </div>
 
@@ -331,7 +372,7 @@ To publish documents to [Confluence](https://www.atlassian.com/software/confluen
 
 <div id="footer-text">
 
-Last updated 2022-03-15 12:57:10 +0100
+Last updated 2022-03-15 16:34:36 +0100
 
 </div>
 

@@ -1,0 +1,11 @@
+{
+  // this is a comment
+  "extensions": ["./adocs/_extensions/exec.js"],
+
+  // this is another comment
+  "asciidoctorOptions": {
+    "attributes": {
+      "kroki-server-url": "http://my-server-url:port"
+    }
+  }
+}

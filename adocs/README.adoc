@@ -8,7 +8,6 @@
 :kroki: https://github.com/Mogztter/asciidoctor-kroki[Asciidoctor Kroki Extension]
 :nodejs: https://nodejs.org[Node.js v16+]
 :pandoc: https://pandoc.org[Pandoc]
-:repo-root: https://github.com/fardjad/node-ascaid/tree/master
 :wsl: https://docs.microsoft.com/en-us/windows/wsl[WSL]
 :agiledocumentation: http://agilemodeling.com/essays/agileDocumentation.htm
 
@@ -69,7 +68,7 @@ end
 ....
 
 _Note: This document is generated with_ *_ascaid_* _itself._ _Check out the 
-source {repo-root}/adocs/[here]._
+source link:./README.adoc[here]._
 
 === Installation
 
@@ -106,15 +105,41 @@ exec::[command="node ../cli/ascaid.js help gfm-to-confluence"]
 
 === Config File
 
-You can configure *ascaid* to load additional extensions by creating a file 
-named `ascaid.config.json` in the current working directory. An example can 
-be found {repo-root}/examples/asciidoctor-extension[here].
+You can optionally use a config file to register custom extensions and 
+set {asciidoctorjs} options. On startup, *ascaid* looks for a config file named 
+`ascaid.config.json` in the current working directory. The following block 
+shows an example config file:
 
-{kroki} is included by default for convenience.
 
-=== GitHub Actions Usage
+```json
+{
+  // JSON comments will be striped out
 
-To publish documents to {confluence} you'll need to create an 
-{confluence-api-token} and a root page to publish the
-documents under. An example project can be 
-found {repo-root}/examples/github-actions-publish-to-confluence[here].
+  "extensions": ["./path/to/extension.js"],
+
+  // https://docs.asciidoctor.org/asciidoctor/latest/api/options/
+  "asciidoctorOptions": {
+    "attributes": {
+      "kroki-server-url": "http://my-server-url:port"
+    }
+  }
+}
+```
+
+=== Extensions
+
+*ascaid* supports {asciidoctorjs-extensions}.
+
+{kroki} is included by default to make it more convenient to use *ascaid* 
+without a config file.
+
+An example implementation of a custom extension can be found 
+link:../examples/asciidoctor-extension[here].
+
+=== Publishing Documents to Confluence
+
+In order to publish {asciidoc} documents to {confluence}, you should first 
+convert them to {gfm} (see <<_cli_usage>> for more info). Then you'll need to 
+create an {confluence-api-token} and a root page to publish the documents 
+under. An example project with GitHub Actions integration can be found 
+link:../examples/github-actions-publish-to-confluence[here].
