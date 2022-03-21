@@ -4,7 +4,6 @@ VERSION=$(node -e 'import("./lib/utils.js").then(utils => utils.readVersion()).t
 DOCKER_IMAGE_NAME="fardjad/ascaid"
 
 cp docs/README.md .
-npm publish
 
 docker build -t "${DOCKER_IMAGE_NAME}:${VERSION}" .
 docker push "${DOCKER_IMAGE_NAME}:${VERSION}"
