@@ -30,7 +30,7 @@
 
 <div class="paragraph">
 
-<span class="image">[![ascaid](https://img.shields.io/npm/v/ascaid)](https://www.npmjs.com/package/ascaid)</span> <span class="image">[![Test%20and%20Release](https://img.shields.io/github/workflow/status/fardjad/node-ascaid/Test%20and%20Release)](https://github.com/fardjad/node-ascaid/actions)</span>
+<span class="image">[![ascaid](https://img.shields.io/npm/v/ascaid)](https://www.npmjs.com/package/ascaid)</span> <span class="image">[![ascaid](https://img.shields.io/npm/dm/ascaid)](https://www.npmjs.com/package/ascaid)</span> <span class="image">[![Test%20and%20Release](https://img.shields.io/github/workflow/status/fardjad/node-ascaid/Test%20and%20Release)](https://github.com/fardjad/node-ascaid/actions)</span>
 
 </div>
 
