@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [16, 17]
+        node: [14, 16, 17]
       fail-fast: true
     steps:
       - uses: actions/checkout@main
@@ -58,21 +58,39 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@main
-      - name: Check if version has been updated
-        id: check
+      - id: check
         uses: EndBug/version-check@v1
         with:
           diff-search: true
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create a tag
-        uses: rickstaa/action-create-tag@main
+      - uses: rickstaa/action-create-tag@main
+        if: steps.check.outputs.changed == 'true'
         with:
           tag: v${{ steps.check.outputs.version }}
           message: v${{ steps.check.outputs.version }}
-      - name: Create a release
-        uses: ncipollo/release-action@main
+      - uses: ncipollo/release-action@main
         if: steps.check.outputs.changed == 'true'
         with:
           name: v${{ steps.check.outputs.version }}
           tag: v${{ steps.check.outputs.version }}
           token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@main
+        if: steps.check.outputs.changed == 'true'
+        with:
+          node-version: 16
+          registry-url: "https://registry.npmjs.org"
+      - uses: actions/cache@main
+        env:
+          cache-name: cache-node-${{ matrix.node }}-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install
+        run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
