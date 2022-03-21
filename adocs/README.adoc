@@ -13,7 +13,12 @@
 :agiledocumentation: http://agilemodeling.com/essays/agileDocumentation.htm
 :repo-root-master: https://github.com/fardjad/node-ascaid/blob/master
 
-== ascaid: Hassle-free documentation generation powered by AsciiDoc
+image::{repo-root-master}/media/banner.png?raw=true[alt=Banner]
+
+== ascaid
+image:https://img.shields.io/npm/v/ascaid[link="https://www.npmjs.com/package/ascaid"]
+
+Hassle-free documentation generation powered by AsciiDoc
 
 === TL;DR
 

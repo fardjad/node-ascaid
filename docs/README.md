@@ -4,11 +4,41 @@
 
 <div id="content">
 
-<div class="sect1">
-
-## ascaid: Hassle-free documentation generation powered by AsciiDoc
+<div id="preamble">
 
 <div class="sectionbody">
+
+<div class="imageblock">
+
+<div class="content">
+
+![Banner](https://github.com/fardjad/node-ascaid/blob/master/media/banner.png?raw=true)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="sect1">
+
+## ascaid
+
+<div class="sectionbody">
+
+<div class="paragraph">
+
+<span class="image">[![ascaid](https://img.shields.io/npm/v/ascaid)](https://www.npmjs.com/package/ascaid)</span>
+
+</div>
+
+<div class="paragraph">
+
+Hassle-free documentation generation powered by AsciiDoc
+
+</div>
 
 <div class="sect2">
 

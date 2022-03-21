@@ -1,0 +1,53 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - ".husky/**"
+      - "adocs/**"
+      - "docs/**"
+      - "examples/**"
+      - "media/**"
+      - "LICENSE"
+      - "public.sh"
+  pull_request:
+    paths-ignore:
+      - ".husky/**"
+      - "adocs/**"
+      - "docs/**"
+      - "examples/**"
+      - "media/**"
+      - "LICENSE"
+      - "public.sh"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16, 17]
+      fail-fast: true
+    steps:
+      - uses: actions/checkout@main
+      - uses: nikeee/setup-pandoc@v1
+        with:
+          pandoc-version: "2.17.1.1"
+      - uses: actions/setup-node@main
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Cache node modules
+        uses: actions/cache@main
+        env:
+          cache-name: cache-node-${{ matrix.node }}-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Install
+        run: npm ci
+      - name: Tests
+        run: npm test
