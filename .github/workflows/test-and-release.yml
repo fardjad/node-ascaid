@@ -89,8 +89,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: Install
-        run: npm ci
+      - run: |
+          set -e
+          npm ci
+          cp ./docs/README.md ./
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
