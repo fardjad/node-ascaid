@@ -80,6 +80,7 @@ jobs:
           node-version: 16
           registry-url: "https://registry.npmjs.org"
       - uses: actions/cache@main
+        if: steps.check.outputs.changed == 'true'
         env:
           cache-name: cache-node-${{ matrix.node }}-modules
         with:
@@ -89,10 +90,14 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - run: |
+      - name: Install
+        if: steps.check.outputs.changed == 'true'
+        run: |
           set -e
           npm ci
           cp ./docs/README.md ./
-      - run: npm publish
+      - name: Publish
+        if: steps.check.outputs.changed == 'true'
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
