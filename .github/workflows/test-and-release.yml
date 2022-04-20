@@ -72,6 +72,11 @@ jobs:
     if: needs.version-check.outputs.changed == 'true'
     steps:
       - uses: actions/checkout@main
+      # https://github.com/rickstaa/action-create-tag/issues/10
+      - name: "Change perms on GITHUB_WORKSPACE"
+        run: |
+          sudo chown -R root:root $GITHUB_WORKSPACE
+          sudo chmod -R 0777 $GITHUB_WORKSPACE
       - uses: rickstaa/action-create-tag@main
         with:
           tag: v${{ needs.version-check.outputs.version }}
