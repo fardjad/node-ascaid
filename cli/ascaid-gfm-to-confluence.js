@@ -167,7 +167,9 @@ const main = async () => {
           const page = await createPageTree(rootPageTitle, dir);
           await confluence.createConfluencePage(page);
         } catch (error) {
-          console.error(`error: ${error.message}`);
+          console.error(
+            `error: ${error.response?.body?.message ?? error.message}`
+          );
         }
       }
     );
