@@ -43,7 +43,7 @@
     "cross-env": "^7.0.3",
     "execa": "^6.1.0",
     "glob": "^8.0.3",
-    "pify": "^5.0.0",
+    "pify": "^6.0.0",
     "strip-json-comments": "^4.0.0"
   },
   "repository": "git@github.com:fardjad/node-ascaid.git",
