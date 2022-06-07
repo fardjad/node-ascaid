@@ -27,13 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [14, 16, 17]
+        node: [14, 16, 18]
       fail-fast: true
     steps:
       - uses: actions/checkout@main
       - uses: nikeee/setup-pandoc@v1
         with:
-          pandoc-version: "2.17.1.1"
+          pandoc-version: "2.18"
       - uses: actions/setup-node@main
         with:
           node-version: ${{ matrix.node }}
