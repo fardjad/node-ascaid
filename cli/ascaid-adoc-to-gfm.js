@@ -47,34 +47,26 @@ export const adocToGfm = async (srcDir, outDir, ignore, adoctorOptions) => {
   }
 };
 
-const main = async () => {
-  const version = await readVersion();
+const version = await readVersion();
 
-  program
-    .version(version)
-    .addArgument(new Argument("<srcDir>", "source directory"))
-    .addArgument(new Argument("<outDir>", "output directory"))
-    .addOption(
-      new Option("--ignore [ignore...]", "glob patterns to ignore").default([
-        "**/_*",
-      ])
-    )
-    .description(
-      "Recursively convert AsciiDoc files in a directory to GitHub flavored markdown"
-    )
-    .action(async (srcDir, outDir, { ignore }) => {
-      const { extensions, asciidoctorOptions: adoctorOptions } =
-        await readConfig();
-      await registerExtensions(extensions, path.resolve("."));
+program
+  .version(version)
+  .addArgument(new Argument("<srcDir>", "source directory"))
+  .addArgument(new Argument("<outDir>", "output directory"))
+  .addOption(
+    new Option("--ignore [ignore...]", "glob patterns to ignore").default([
+      "**/_*",
+    ])
+  )
+  .description(
+    "Recursively convert AsciiDoc files in a directory to GitHub flavored markdown"
+  )
+  .action(async (srcDir, outDir, { ignore }) => {
+    const { extensions, asciidoctorOptions: adoctorOptions } =
+      await readConfig();
+    await registerExtensions(extensions, path.resolve("."));
 
-      await adocToGfm(srcDir, outDir, ignore, adoctorOptions);
-    });
+    await adocToGfm(srcDir, outDir, ignore, adoctorOptions);
+  });
 
-  await program.parseAsync(process.argv);
-};
-
-main().catch((error) => {
-  console.error(error);
-
-  process.exit(-1);
-});
+await program.parseAsync(process.argv);

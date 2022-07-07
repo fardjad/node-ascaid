@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -48,13 +48,13 @@
   },
   "repository": "git@github.com:fardjad/node-ascaid.git",
   "devDependencies": {
-    "eslint": "^8.17.0",
+    "eslint": "^8.19.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-unicorn": "^43.0.0",
     "husky": "^8.0.1",
-    "jest": "^28.1.1",
-    "prettier": "^2.6.2"
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
