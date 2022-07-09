@@ -19,7 +19,7 @@ program
   .action(async (rootDir) => {
     const { extensions, asciidoctorOptions: adoctorOptions } =
       await readConfig();
-    await registerExtensions(extensions, path.resolve("."));
+    await registerExtensions(extensions ?? [], path.resolve("."));
 
     await startAsciidocServer(rootDir, adoctorOptions);
   });

@@ -64,7 +64,7 @@ program
   .action(async (srcDir, outDir, { ignore }) => {
     const { extensions, asciidoctorOptions: adoctorOptions } =
       await readConfig();
-    await registerExtensions(extensions, path.resolve("."));
+    await registerExtensions(extensions ?? [], path.resolve("."));
 
     await adocToGfm(srcDir, outDir, ignore, adoctorOptions);
   });
