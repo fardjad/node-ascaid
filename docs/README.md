@@ -118,13 +118,13 @@ Under the hood, **ascaid** uses [Asciidoctor.js](https://docs.asciidoctor.org/as
 
 <div class="ulist">
 
--   It can be configured to load [Asciidoctor.js Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem)
+- It can be configured to load [Asciidoctor.js Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem)
 
--   It includes a live server to help with writing AsciiDoc documents
+- It includes a live server to help with writing AsciiDoc documents
 
--   It can convert Asciidoc files to [GitHub Flavored Markdown](https://github.github.com/gfm)
+- It can convert Asciidoc files to [GitHub Flavored Markdown](https://github.github.com/gfm)
 
--   It can publish GitHub Flavored Markdown files to [Confluence](https://www.atlassian.com/software/confluence)
+- It can publish GitHub Flavored Markdown files to [Confluence](https://www.atlassian.com/software/confluence)
 
 </div>
 
@@ -339,7 +339,12 @@ You can optionally use a config file to register custom extensions and set [Asci
 {
   // JSON comments will be striped out
 
-  "extensions": ["./path/to/extension.js"],
+  "extensions": [
+    // npm i asciidoctor-kroki
+    "asciidoctor-kroki",
+
+    "./path/to/extension.js"
+  ],
 
   // https://docs.asciidoctor.org/asciidoctor/latest/api/options/
   "asciidoctorOptions": {
@@ -365,12 +370,6 @@ You can optionally use a config file to register custom extensions and set [Asci
 <div class="paragraph">
 
 **ascaid** supports [Asciidoctor.js Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem).
-
-</div>
-
-<div class="paragraph">
-
-[Asciidoctor Kroki Extension](https://github.com/Mogztter/asciidoctor-kroki) is included by default to make it more convenient to use **ascaid** without a config file.
 
 </div>
 

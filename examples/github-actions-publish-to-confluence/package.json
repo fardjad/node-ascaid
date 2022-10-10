@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "description": "Example usage of ascaid for publishing documentation",
   "devDependencies": {
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "ascaid": "*"
   },
   "scripts": {

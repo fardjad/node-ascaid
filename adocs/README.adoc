@@ -1,4 +1,3 @@
-:nofooter:
 :asciidoc: https://asciidoctor.org[AsciiDoc]
 :asciidoctorjs-extensions: https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem[Asciidoctor.js Extensions]
 :asciidoctorjs: https://docs.asciidoctor.org/asciidoctor.js/latest[Asciidoctor.js]
@@ -6,11 +5,12 @@
 :confluence-api-token: https://id.atlassian.com/manage/api-tokens[API token]
 :confluence: https://www.atlassian.com/software/confluence[Confluence]
 :gfm: https://github.github.com/gfm[GitHub Flavored Markdown]
-:kroki: https://github.com/Mogztter/asciidoctor-kroki[Asciidoctor Kroki Extension]
 :nodejs: https://nodejs.org[Node.js v16+]
 :pandoc: https://pandoc.org[Pandoc]
 :wsl: https://docs.microsoft.com/en-us/windows/wsl[WSL]
 :agiledocumentation: http://agilemodeling.com/essays/agileDocumentation.htm
+
+// GitHub doesn't show images with data-uris, therefore embedding images is not possible
 :repo-root-master: https://github.com/fardjad/node-ascaid/blob/master
 
 image::{repo-root-master}/media/banner.png?raw=true[alt=Banner]
@@ -124,7 +124,12 @@ shows an example config file:
 {
   // JSON comments will be striped out
 
-  "extensions": ["./path/to/extension.js"],
+  "extensions": [
+    // npm i asciidoctor-kroki
+    "asciidoctor-kroki",
+
+    "./path/to/extension.js"
+  ],
 
   // https://docs.asciidoctor.org/asciidoctor/latest/api/options/
   "asciidoctorOptions": {
@@ -140,9 +145,6 @@ shows an example config file:
 === Extensions
 
 *ascaid* supports {asciidoctorjs-extensions}.
-
-{kroki} is included by default to make it more convenient to use *ascaid*
-without a config file.
 
 An example implementation of a custom extension can be found
 link:{repo-root-master}/examples/asciidoctor-extension[here].
