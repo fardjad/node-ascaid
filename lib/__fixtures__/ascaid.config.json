@@ -5,6 +5,8 @@
   // this is another comment
   "asciidoctorOptions": {
     "attributes": {
+      "this-should-be-overridden": "not-overridden-yet",
+      "this-should-be-deleted": "not-deleted-yet",
       "kroki-server-url": "http://my-server-url:port"
     }
   }

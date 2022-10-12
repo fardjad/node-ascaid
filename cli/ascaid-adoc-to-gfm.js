@@ -8,6 +8,7 @@ import { adocConvert } from "../index.js";
 import { pandocConvert } from "../index.js";
 import { invokeInDir, readConfig, readVersion } from "../index.js";
 import { registerExtensions } from "../lib/asciidoctor.js";
+import { attributeOption, configOption } from "./common-options.js";
 
 const glob = promisify(globcb);
 
@@ -54,16 +55,20 @@ program
   .addArgument(new Argument("<srcDir>", "source directory"))
   .addArgument(new Argument("<outDir>", "output directory"))
   .addOption(
-    new Option("--ignore [ignore...]", "glob patterns to ignore").default([
+    new Option("--ignore [globPattern...]", "glob patterns to ignore").default([
       "**/_*",
     ])
   )
+  .addOption(configOption)
+  .addOption(attributeOption)
   .description(
     "Recursively convert AsciiDoc files in a directory to GitHub flavored markdown"
   )
-  .action(async (srcDir, outDir, { ignore }) => {
-    const { extensions, asciidoctorOptions: adoctorOptions } =
-      await readConfig();
+  .action(async (srcDir, outDir, { ignore, config, attribute }) => {
+    const { extensions, asciidoctorOptions: adoctorOptions } = await readConfig(
+      config,
+      attribute
+    );
     await registerExtensions(extensions ?? [], path.resolve("."));
 
     await adocToGfm(srcDir, outDir, ignore, adoctorOptions);

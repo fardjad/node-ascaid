@@ -238,11 +238,16 @@ You can install the package globally with npm:
     Start an AsciiDoc server
 
     Arguments:
-      rootDir        server root directory (default: current directory)
+      rootDir                         server root directory (default: current
+                                      directory)
 
     Options:
-      -V, --version  output the version number
-      -h, --help     display help for command
+      -V, --version                   output the version number
+      -a, --attribute [key=value...]  set a document attribute. The value given
+                                      will override values from the config file.
+                                      Passing the key without =value will unset the
+                                      attribute (default: [])
+      -h, --help                      display help for command
 
 </div>
 
@@ -263,13 +268,19 @@ You can install the package globally with npm:
     Recursively convert AsciiDoc files in a directory to GitHub flavored markdown
 
     Arguments:
-      srcDir                source directory
-      outDir                output directory
+      srcDir                          source directory
+      outDir                          output directory
 
     Options:
-      -V, --version         output the version number
-      --ignore [ignore...]  glob patterns to ignore (default: ["**/_*"])
-      -h, --help            display help for command
+      -V, --version                   output the version number
+      --ignore [globPattern...]       glob patterns to ignore (default: ["**/_*"])
+      -c, --config <path>             config file path (default:
+                                      "./ascaid.config.json")
+      -a, --attribute [key=value...]  set a document attribute. The value given
+                                      will override values from the config file.
+                                      Passing the key without =value will unset the
+                                      attribute (default: [])
+      -h, --help                      display help for command
 
 </div>
 

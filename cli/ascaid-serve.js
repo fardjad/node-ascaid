@@ -4,6 +4,7 @@ import { Argument, program } from "commander";
 import { startAsciidocServer } from "../index.js";
 import { readConfig, readVersion } from "../index.js";
 import { registerExtensions } from "../index.js";
+import { attributeOption } from "./common-options.js";
 
 const version = await readVersion();
 
@@ -15,10 +16,13 @@ program
       "current directory"
     )
   )
+  .addOption(attributeOption)
   .description("Start an AsciiDoc server")
-  .action(async (rootDir) => {
-    const { extensions, asciidoctorOptions: adoctorOptions } =
-      await readConfig();
+  .action(async (rootDir, { config, attribute }) => {
+    const { extensions, asciidoctorOptions: adoctorOptions } = await readConfig(
+      config,
+      attribute
+    );
     await registerExtensions(extensions ?? [], path.resolve("."));
 
     await startAsciidocServer(rootDir, adoctorOptions);
