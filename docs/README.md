@@ -30,7 +30,7 @@
 
 <div class="paragraph">
 
-<span class="image">[![ascaid](https://img.shields.io/npm/v/ascaid)](https://www.npmjs.com/package/ascaid)</span> <span class="image">[![ascaid](https://img.shields.io/npm/dm/ascaid)](https://www.npmjs.com/package/ascaid)</span> <span class="image">[![Test%20and%20Release](https://img.shields.io/github/workflow/status/fardjad/node-ascaid/Test%20and%20Release)](https://github.com/fardjad/node-ascaid/actions)</span>
+<span class="image"><a href="https://www.npmjs.com/package/ascaid" class="image"><img src="https://img.shields.io/npm/v/ascaid" alt="ascaid" /></a></span> <span class="image"><a href="https://www.npmjs.com/package/ascaid" class="image"><img src="https://img.shields.io/npm/dm/ascaid" alt="ascaid" /></a></span> <span class="image"><a href="https://github.com/fardjad/node-ascaid/actions" class="image"><img src="https://img.shields.io/github/workflow/status/fardjad/node-ascaid/Test%20and%20Release" alt="Test%20and%20Release" /></a></span>
 
 </div>
 
@@ -60,7 +60,7 @@ Hassle-free documentation generation powered by AsciiDoc
 
 <div class="content">
 
-![diagram example](https://github.com/fardjad/node-ascaid/blob/master/media/diagram-example.png?raw=true)
+<img src="https://github.com/fardjad/node-ascaid/blob/master/media/diagram-example.png?raw=true" style="width:80.0%" alt="diagram example" />
 
 </div>
 
@@ -76,7 +76,7 @@ Hassle-free documentation generation powered by AsciiDoc
 
 <div class="content">
 
-![custom extension example](https://github.com/fardjad/node-ascaid/blob/master/media/custom-extension-example.png?raw=true)
+<img src="https://github.com/fardjad/node-ascaid/blob/master/media/custom-extension-example.png?raw=true" style="width:80.0%" alt="custom extension example" />
 
 </div>
 
@@ -86,7 +86,7 @@ Hassle-free documentation generation powered by AsciiDoc
 
 <div class="content">
 
-![exec extension example](https://github.com/fardjad/node-ascaid/blob/master/media/exec-extension-example.png?raw=true)
+<img src="https://github.com/fardjad/node-ascaid/blob/master/media/exec-extension-example.png?raw=true" style="width:80.0%" alt="exec extension example" />
 
 </div>
 
@@ -118,13 +118,13 @@ Under the hood, **ascaid** uses [Asciidoctor.js](https://docs.asciidoctor.org/as
 
 <div class="ulist">
 
-  - It can be configured to load [Asciidoctor.js Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem)
+- It can be configured to load [Asciidoctor.js Extensions](https://docs.asciidoctor.org/asciidoctor.js/latest/extend/extensions/ecosystem)
 
-  - It includes a live server to help with writing AsciiDoc documents
+- It includes a live server to help with writing AsciiDoc documents
 
-  - It can convert Asciidoc files to [GitHub Flavored Markdown](https://github.github.com/gfm)
+- It can convert Asciidoc files to [GitHub Flavored Markdown](https://github.github.com/gfm)
 
-  - It can publish GitHub Flavored Markdown files to [Confluence](https://www.atlassian.com/software/confluence)
+- It can publish GitHub Flavored Markdown files to [Confluence](https://www.atlassian.com/software/confluence)
 
 </div>
 
@@ -205,13 +205,13 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid [options] [command]
-    
+
     Hassle-free documentation generation powered by AsciiDoc
-    
+
     Options:
       -V, --version                  output the version number
       -h, --help                     display help for command
-    
+
     Commands:
       serve [directory]              start an AsciiDoc server
       adoc-to-gfm <srcDir> <outDir>  AsciiDoc -> GitHub flavored markdown
@@ -234,13 +234,13 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid-serve [options] [rootDir]
-    
+
     Start an AsciiDoc server
-    
+
     Arguments:
       rootDir                         server root directory (default: current
                                       directory)
-    
+
     Options:
       -V, --version                   output the version number
       -c, --config <path>             config file path (default:
@@ -266,13 +266,13 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid-adoc-to-gfm [options] <srcDir> <outDir>
-    
+
     Recursively convert AsciiDoc files in a directory to GitHub flavored markdown
-    
+
     Arguments:
       srcDir                          source directory
       outDir                          output directory
-    
+
     Options:
       -V, --version                   output the version number
       --ignore [globPattern...]       glob patterns to ignore (default: ["**/_*"])
@@ -299,12 +299,12 @@ You can install the package globally with npm:
 <div class="content">
 
     Usage: ascaid-gfm-to-confluence [options] <dir>
-    
+
     Recursively publish a GitHub flavored markdown directory to Confluence
-    
+
     Arguments:
       dir                                dir to publish to Confluence
-    
+
     Options:
       -V, --version                      output the version number
       --api-base-url [apiBaseUrl]        Confluence API base URL (default:
