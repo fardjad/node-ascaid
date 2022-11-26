@@ -53,6 +53,7 @@
     "husky": "^8.0.2",
     "jest": "^29.3.1",
     "jest-light-runner": "^0.4.1",
+    "npm-check-updates": "^16.4.3",
     "prettier": "^2.7.1"
   },
   "optionalDependencies": {
