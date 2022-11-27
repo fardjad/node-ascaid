@@ -1,0 +1,70 @@
+name: upgrade-deps
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  upgrade-deps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+        with:
+          node-version: 18
+      - name: Cache node modules
+        uses: actions/cache@main
+        env:
+          cache-name: cache-node-${{ matrix.node }}-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Upgrade dependencies
+        run: |
+          set -e
+
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local pull.rebase true
+
+          npm ci --quiet --no-progress
+          npx ncu
+          npm i --quiet --no-progress
+          npm audit fix --quiet --no-progress || true
+          npm run fix || true
+
+          if git diff-index --quiet HEAD --; then
+            # no changes
+            exit 0
+          fi
+
+          # work around "insufficient permission for adding an object to repository database .git/object" issue
+          sudo chmod -R ugo+rwX .git
+
+          npm version patch
+          PKG_VERSION="$(node -e 'process.stdout.write(require("./package.json").version)')"
+
+          REMOTE_REPO="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          CURRENT_BRANCH="$(git branch --show-current)"
+          NEW_BRANCH="v${PKG_VERSION}"
+
+          if git ls-remote --exit-code --heads "${REMOTE_REPO}" "${NEW_BRANCH}" > /dev/null; then
+            # PR already exists
+            exit 0
+          fi
+
+          git commit -a -m "${PKG_VERSION}" --no-verify
+          git pull "${REMOTE_REPO}" "${CURRENT_BRANCH}"
+          git checkout -b "${NEW_BRANCH}"
+          git push "${REMOTE_REPO}" "HEAD:${NEW_BRANCH}"
+
+          PR_URL=$(gh pr create -B "${CURRENT_BRANCH}" -H "${NEW_BRANCH}" -f)
+          gh pr review --approve "${PR_URL}"
+          gh pr merge --auto --delete-branch --rebase "${PR_URL}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}

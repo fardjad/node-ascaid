@@ -1,4 +1,4 @@
-name: Test and Release
+name: test-and-release
 
 on:
   push:
@@ -10,8 +10,8 @@ on:
       - "docs/**"
       - "examples/**"
       - "media/**"
+      - "scripts/**"
       - "LICENSE"
-      - "publish.sh"
   pull_request:
     paths-ignore:
       - ".husky/**"
@@ -19,8 +19,8 @@ on:
       - "docs/**"
       - "examples/**"
       - "media/**"
+      - "scripts/**"
       - "LICENSE"
-      - "publish.sh"
 
 jobs:
   test:
