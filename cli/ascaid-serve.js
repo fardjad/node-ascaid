@@ -20,13 +20,13 @@ program
   .addOption(attributeOption)
   .description("Start an AsciiDoc server")
   .action(async (rootDir, { config, attribute }) => {
-    const { extensions, asciidoctorOptions: adoctorOptions } = await readConfig(
+    const { extensions, asciidoctorOptions } = await readConfig(
       config,
       attribute
     );
     await registerExtensions(extensions ?? [], path.resolve("."));
 
-    await startAsciidocServer(rootDir, adoctorOptions);
+    await startAsciidocServer(rootDir, asciidoctorOptions);
   });
 
 await program.parseAsync(process.argv);
