@@ -1,6 +1,5 @@
 import { program } from "commander";
-import { readVersion } from "../index.js";
-import { checkPandoc } from "../index.js";
+import { readVersion, checkPandoc } from "../index.js";
 
 const version = await readVersion();
 

@@ -19,14 +19,16 @@ program
   .addOption(configOption)
   .addOption(attributeOption)
   .description("Start an AsciiDoc server")
-  .action(async (rootDir, { config, attribute }) => {
-    const { extensions, asciidoctorOptions } = await readConfig(
-      config,
-      attribute
-    );
-    await registerExtensions(extensions ?? [], path.resolve("."));
+  .action(
+    async (
+      rootDir,
+      { config: configFilePath, attribute: attributeOverrideKvs }
+    ) => {
+      const config = await readConfig(configFilePath, attributeOverrideKvs);
 
-    await startAsciidocServer(rootDir, asciidoctorOptions);
-  });
+      await registerExtensions(config.extensions ?? [], path.resolve("."));
+      await startAsciidocServer(rootDir, config);
+    }
+  );
 
 await program.parseAsync(process.argv);
