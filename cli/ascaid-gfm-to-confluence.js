@@ -27,7 +27,9 @@ const createPageTree = async (title, filePath) => {
   const children = [];
 
   for (const file of files) {
-    if (!file.isDirectory) {
+    if (file.isDirectory) {
+      children.push(await createPageTree(file.name, file.path));
+    } else {
       if (file.extension.toLowerCase() !== ".md") continue;
       const contents = fs.readFileSync(file.path, { encoding: "utf8" });
 
@@ -49,8 +51,6 @@ const createPageTree = async (title, filePath) => {
         body,
         children: [],
       });
-    } else {
-      children.push(await createPageTree(file.name, file.path));
     }
   }
 
