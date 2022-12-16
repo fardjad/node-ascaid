@@ -30,7 +30,7 @@
 
 <div class="paragraph">
 
-<span class="image"><a href="https://www.npmjs.com/package/ascaid" class="image"><img src="https://img.shields.io/npm/v/ascaid" alt="ascaid" /></a></span> <span class="image"><a href="https://www.npmjs.com/package/ascaid" class="image"><img src="https://img.shields.io/npm/dm/ascaid" alt="ascaid" /></a></span> <span class="image"><a href="https://github.com/fardjad/node-ascaid/actions" class="image"><img src="https://img.shields.io/github/workflow/status/fardjad/node-ascaid/Test%20and%20Release" alt="Test%20and%20Release" /></a></span>
+<span class="image"><a href="https://www.npmjs.com/package/ascaid" class="image"><img src="https://img.shields.io/npm/v/ascaid" alt="ascaid" /></a></span> <span class="image"><a href="https://www.npmjs.com/package/ascaid" class="image"><img src="https://img.shields.io/npm/dm/ascaid" alt="ascaid" /></a></span> <span class="image"><a href="https://github.com/fardjad/node-ascaid/actions" class="image"><img src="https://img.shields.io/github/actions/workflow/status/fardjad/node-ascaid/test-and-release.yml?branch=master" alt="test and release" /></a></span>
 
 </div>
 
