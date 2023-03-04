@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.7.45",
+  "version": "1.7.46",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -49,7 +49,7 @@
     "eslint": "^8.35.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-unicorn": "^45.0.2",
+    "eslint-plugin-unicorn": "^46.0.0",
     "husky": "^8.0.3",
     "jest": "^29.4.3",
     "jest-light-runner": "^0.4.1",
