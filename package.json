@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.7.53",
+  "version": "1.7.54",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -53,7 +53,7 @@
     "husky": "^8.0.3",
     "jest": "^29.5.0",
     "jest-light-runner": "^0.4.1",
-    "npm-check-updates": "^16.7.12",
+    "npm-check-updates": "^16.7.13",
     "prettier": "^2.8.4"
   },
   "optionalDependencies": {
