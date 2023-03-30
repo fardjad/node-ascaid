@@ -243,8 +243,7 @@ You can install the package globally with npm:
 
     Options:
       -V, --version                   output the version number
-      -c, --config <path>             config file path (default:
-                                      "./ascaid.config.json")
+      -c, --config <path>             config file path
       -a, --attribute [key=value...]  set a document attribute. The value given
                                       will override values from the config file.
                                       Passing the key without =value will unset the
@@ -276,8 +275,7 @@ You can install the package globally with npm:
     Options:
       -V, --version                   output the version number
       --ignore [globPattern...]       glob patterns to ignore (default: ["**/_*"])
-      -c, --config <path>             config file path (default:
-                                      "./ascaid.config.json")
+      -c, --config <path>             config file path
       -a, --attribute [key=value...]  set a document attribute. The value given
                                       will override values from the config file.
                                       Passing the key without =value will unset the
@@ -340,7 +338,7 @@ You can install the package globally with npm:
 
 <div class="paragraph">
 
-You can optionally use a config file to register custom extensions and set [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) options. On startup, **ascaid** looks for a config file named `ascaid.config.json` in the current working directory. The following block shows an example config file:
+You can optionally use a config file to register custom extensions and set [Asciidoctor.js](https://docs.asciidoctor.org/asciidoctor.js/latest) options. On startup, **ascaid** looks for a config file named `ascaid.config.json` or `ascaid.config.jsonc` in the current working directory. The following block shows an example config file:
 
 </div>
 

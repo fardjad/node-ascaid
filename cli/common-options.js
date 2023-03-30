@@ -8,4 +8,4 @@ export const attributeOption = new Option(
 export const configOption = new Option(
   "-c, --config <path>",
   "config file path"
-).default("./ascaid.config.json");
+);

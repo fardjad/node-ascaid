@@ -116,8 +116,8 @@ exec::[command="node ../cli/ascaid.js help gfm-to-confluence"]
 
 You can optionally use a config file to register custom extensions and
 set {asciidoctorjs} options. On startup, *ascaid* looks for a config file named
-`ascaid.config.json` in the current working directory. The following block
-shows an example config file:
+`ascaid.config.json` or `ascaid.config.jsonc` in the current working directory. 
+The following block shows an example config file:
 
 
 ```json
