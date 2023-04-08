@@ -1,6 +1,5 @@
 import { Argument, Option, program } from "commander";
-import { promisify } from "node:util";
-import globcb from "glob";
+import { globSync } from "glob";
 import path from "node:path";
 import fs from "node:fs";
 
@@ -10,10 +9,8 @@ import { invokeInDir, readConfig, readVersion } from "../index.js";
 import { registerExtensions } from "../lib/asciidoctor.js";
 import { attributeOption, configOption } from "./common-options.js";
 
-const glob = promisify(globcb);
-
 export const adocToGfm = async (srcDir, outDir, ignore, adoctorOptions) => {
-  const matches = await glob("**/*.{asciidoc,adoc,asc}", {
+  const matches = globSync("**/*.{asciidoc,adoc,asc}", {
     nocase: true,
     cwd: srcDir,
     ignore,

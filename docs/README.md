@@ -305,23 +305,12 @@ You can install the package globally with npm:
 
     Options:
       -V, --version                      output the version number
-      --api-base-url [apiBaseUrl]        Confluence API base URL (default:
-                                         CONFLUENCE_API_BASE_URL environment
-                                         variable)
-      --api-username [apiUsername]       Confluence API username (default:
-                                         CONFLUENCE_API_USERNAME environment
-                                         variable)
-      --api-password [apiPassword]       Confluence API password (default:
-                                         CONFLUENCE_API_USERNAME environment
-                                         variable)
-      --space-key [spaceKey]             Confluence space key (default:
-                                         CONFLUENCE_SPACE_KEY environment variable)
-      --root-page-id [rootPageId]        Confluence root page ID (default:
-                                         CONFLUENCE_ROOT_PAGE_ID environment
-                                         variable)
-      --root-page-title [rootPageTitle]  Confluence root page title (default:
-                                         CONFLUENCE_ROOT_PAGE_TITLE environment
-                                         variable)
+      --api-base-url [apiBaseUrl]        Confluence API base URL
+      --api-username [apiUsername]       Confluence API username
+      --api-password [apiPassword]       Confluence API password
+      --space-key [spaceKey]             Confluence space key
+      --root-page-id [rootPageId]        Confluence root page ID
+      --root-page-title [rootPageTitle]  Confluence root page title
       -h, --help                         display help for command
 
 </div>
