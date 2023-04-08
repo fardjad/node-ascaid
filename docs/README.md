@@ -339,6 +339,7 @@ You can optionally use a config file to register custom extensions and set [Asci
 {
   // JSON comments will be striped out
 
+  "$schema": "https://raw.githubusercontent.com/fardjad/node-ascaid/master/ascaid.config.schema.json",
   "extensions": [
     // npm i asciidoctor-kroki
     "asciidoctor-kroki",

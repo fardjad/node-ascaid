@@ -1,7 +1,7 @@
 {
+  "$schema": "https://raw.githubusercontent.com/fardjad/node-ascaid/master/ascaid.config.schema.json",
   // this is a comment
   "extensions": ["./adocs/_extensions/exec.js"],
-
   // this is another comment
   "asciidoctorOptions": {
     "attributes": {

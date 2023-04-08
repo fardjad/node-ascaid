@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "asciidoctorOptions": {
+      "type": "object",
+      "properties": {
+        "attributes": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

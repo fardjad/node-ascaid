@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/fardjad/node-ascaid/master/ascaid.config.schema.json",
   "extensions": ["asciidoctor-kroki", "./adocs/_extensions/exec.js"],
   "asciidoctorOptions": {
     "attributes": {

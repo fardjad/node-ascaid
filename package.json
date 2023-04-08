@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.8.6",
+  "version": "1.8.7",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -10,6 +10,7 @@
     "index.js",
     "lib/",
     "cli/",
+    "ascaid.config.schema.json",
     "!lib/**/*.test.js",
     "!**/__fixtures__/"
   ],
