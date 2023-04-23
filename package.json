@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.8.14",
+  "version": "1.8.15",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -41,7 +41,7 @@
     "commander": "^10.0.1",
     "confluence-api": "^1.4.0",
     "execa": "^7.1.1",
-    "glob": "^10.2.1",
+    "glob": "^10.2.2",
     "pify": "^6.1.0",
     "strip-json-comments": "^5.0.0"
   },
