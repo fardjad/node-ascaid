@@ -4,7 +4,7 @@ ENV NODE_ENV production
 
 WORKDIR /opt/node-ascaid
 
-COPY ./package*.json ./
+COPY ./package*.json ./.npmrc ./
 RUN npm install --ignore-scripts
 
 FROM node:16 as app
@@ -14,7 +14,7 @@ ENV NODE_ENV production
 WORKDIR /opt/node-ascaid
 
 RUN apt-get update && apt-get install -y \
-    pandoc \
+ pandoc \
  && rm -rf /var/lib/apt/lists/*
 
 COPY . ./
