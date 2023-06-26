@@ -1,25 +1,22 @@
-import { Argument, Option, program } from "commander";
 import path from "node:path";
 import fs from "node:fs";
 import assert from "node:assert";
+import { Argument, Option, program } from "commander";
 
-import { pandocConvert } from "../index.js";
-import { readVersion } from "../index.js";
-import { ConfluenceClient } from "../index.js";
-
-const MD_TITLE_REGEX = /^#+\s+(.*)/;
-
-const isNotNullOrEmptyString = (string_) => {
-  return (
-    string_ != undefined && typeof string_ === "string" && string_.trim() !== ""
-  );
-};
+import {
+  ConfluenceClient,
+  getTitleFromMarkdown,
+  isNotNullOrEmptyString,
+  mdConvert,
+  normalizeSupportedExtnames,
+  readVersion,
+} from "../index.js";
 
 const createPageTree = async (title, filePath) => {
   const dirContents = await fs.promises.readdir(filePath);
   const files = dirContents.map((file) => ({
     name: file,
-    extension: path.extname(file),
+    normalizedExtension: normalizeSupportedExtnames(path.extname(file)),
     path: `${filePath}/${file}`,
     isDirectory: fs.lstatSync(`${filePath}/${file}`).isDirectory(),
   }));
@@ -30,22 +27,12 @@ const createPageTree = async (title, filePath) => {
     if (file.isDirectory) {
       children.push(await createPageTree(file.name, file.path));
     } else {
-      if (file.extension.toLowerCase() !== ".md") continue;
+      if (file.normalizedExtension !== ".md") continue;
       const contents = fs.readFileSync(file.path, { encoding: "utf8" });
 
-      let title = file.name.slice(
-        0,
-        Math.max(0, file.name.length - file.extension.length)
-      );
-      const firstLine = contents
-        .split(/\n\r?/)
-        .find((line) => MD_TITLE_REGEX.test(line.trim()));
-      if (firstLine != undefined) {
-        title = firstLine.match(MD_TITLE_REGEX)[1].trim();
-      }
-      const body = await pandocConvert(contents, "gfm", "html", [
-        "--wrap=none",
-      ]);
+      const title =
+        (await getTitleFromMarkdown(contents)) ?? path.parse(file.name).name;
+      const body = await mdConvert(contents);
       children.push({
         title,
         body,

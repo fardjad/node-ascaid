@@ -28,7 +28,7 @@ export const adocToGfm = async (srcDir, outDir, ignore, adoctorOptions) => {
 
     const readDir = path.join(srcDir, dirname);
     const html = await invokeInDir(readDir, () => {
-      return adocConvert(adoc, adoctorOptions);
+      return adocConvert(adoc, asciidoctorOptions);
     });
     const gfm = await pandocConvert(html, "html", "gfm", ["--wrap=none"]);
 
@@ -62,13 +62,13 @@ program
     "Recursively convert AsciiDoc files in a directory to GitHub flavored markdown"
   )
   .action(async (srcDir, outDir, { ignore, config, attribute }) => {
-    const { extensions, asciidoctorOptions: adoctorOptions } = await readConfig(
+    const { extensions, asciidoctorOptions } = await readConfig(
       config,
       attribute
     );
     await registerExtensions(extensions ?? [], path.resolve("."));
 
-    await adocToGfm(srcDir, outDir, ignore, adoctorOptions);
+    await adocToGfm(srcDir, outDir, ignore, asciidoctorOptions);
   });
 
 await program.parseAsync(process.argv);
