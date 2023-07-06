@@ -35,12 +35,12 @@ export const adocToGfm = async (srcDir, outDir, ignore, adoctorOptions) => {
     const basename = path.basename(fileName);
     const fileNameWithoutExtension = basename.slice(
       0,
-      Math.max(0, basename.length - path.extname(basename).length)
+      Math.max(0, basename.length - path.extname(basename).length),
     );
     await fs.promises.writeFile(
       path.join(writeDir, `${fileNameWithoutExtension}.md`),
       gfm,
-      { encoding: "utf8" }
+      { encoding: "utf8" },
     );
   }
 };
@@ -54,17 +54,17 @@ program
   .addOption(
     new Option("--ignore [globPattern...]", "glob patterns to ignore").default([
       "**/_*",
-    ])
+    ]),
   )
   .addOption(configOption)
   .addOption(attributeOption)
   .description(
-    "Recursively convert AsciiDoc files in a directory to GitHub flavored markdown"
+    "Recursively convert AsciiDoc files in a directory to GitHub flavored markdown",
   )
   .action(async (srcDir, outDir, { ignore, config, attribute }) => {
     const { extensions, asciidoctorOptions: adoctorOptions } = await readConfig(
       config,
-      attribute
+      attribute,
     );
     await registerExtensions(extensions ?? [], path.resolve("."));
 
