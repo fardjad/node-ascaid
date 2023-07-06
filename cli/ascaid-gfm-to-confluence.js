@@ -35,7 +35,7 @@ const createPageTree = async (title, filePath) => {
 
       let title = file.name.slice(
         0,
-        Math.max(0, file.name.length - file.extension.length)
+        Math.max(0, file.name.length - file.extension.length),
       );
       const firstLine = contents
         .split(/\n\r?/)
@@ -67,56 +67,56 @@ program
   .addOption(
     new Option(
       "--api-base-url [apiBaseUrl]",
-      "Confluence API base URL"
+      "Confluence API base URL",
     ).default(
       process.env.CONFLUENCE_API_BASE_URL,
-      "CONFLUENCE_API_BASE_URL environment variable"
-    )
+      "CONFLUENCE_API_BASE_URL environment variable",
+    ),
   )
   .addOption(
     new Option(
       "--api-username [apiUsername]",
-      "Confluence API username"
+      "Confluence API username",
     ).default(
       process.env.CONFLUENCE_API_USERNAME,
-      "CONFLUENCE_API_USERNAME environment variable"
-    )
+      "CONFLUENCE_API_USERNAME environment variable",
+    ),
   )
   .addOption(
     new Option(
       "--api-password [apiPassword]",
-      "Confluence API password"
+      "Confluence API password",
     ).default(
       process.env.CONFLUENCE_API_PASSWORD,
-      "CONFLUENCE_API_USERNAME environment variable"
-    )
+      "CONFLUENCE_API_USERNAME environment variable",
+    ),
   )
   .addOption(
     new Option("--space-key [spaceKey]", "Confluence space key").default(
       process.env.CONFLUENCE_SPACE_KEY,
-      "CONFLUENCE_SPACE_KEY environment variable"
-    )
+      "CONFLUENCE_SPACE_KEY environment variable",
+    ),
   )
   .addOption(
     new Option(
       "--root-page-id [rootPageId]",
-      "Confluence root page ID"
+      "Confluence root page ID",
     ).default(
       process.env.CONFLUENCE_ROOT_PAGE_ID,
-      "CONFLUENCE_ROOT_PAGE_ID environment variable"
-    )
+      "CONFLUENCE_ROOT_PAGE_ID environment variable",
+    ),
   )
   .addOption(
     new Option(
       "--root-page-title [rootPageTitle]",
-      "Confluence root page title"
+      "Confluence root page title",
     ).default(
       process.env.CONFLUENCE_ROOT_PAGE_TITLE,
-      "CONFLUENCE_ROOT_PAGE_TITLE environment variable"
-    )
+      "CONFLUENCE_ROOT_PAGE_TITLE environment variable",
+    ),
   )
   .description(
-    "Recursively publish a GitHub flavored markdown directory to Confluence"
+    "Recursively publish a GitHub flavored markdown directory to Confluence",
   )
   .action(
     async (
@@ -128,32 +128,32 @@ program
         spaceKey,
         rootPageId,
         rootPageTitle,
-      }
+      },
     ) => {
       try {
         assert.ok(
           isNotNullOrEmptyString(apiBaseUrl),
-          "missing required option 'apiBaseURL'"
+          "missing required option 'apiBaseURL'",
         );
         assert.ok(
           isNotNullOrEmptyString(apiUsername),
-          "missing required option 'apiUsername'"
+          "missing required option 'apiUsername'",
         );
         assert.ok(
           isNotNullOrEmptyString(apiPassword),
-          "missing required option 'apiPassword'"
+          "missing required option 'apiPassword'",
         );
         assert.ok(
           isNotNullOrEmptyString(spaceKey),
-          "missing required option 'spaceKey'"
+          "missing required option 'spaceKey'",
         );
         assert.ok(
           isNotNullOrEmptyString(rootPageId),
-          "missing required option 'rootPageID'"
+          "missing required option 'rootPageID'",
         );
         assert.ok(
           isNotNullOrEmptyString(rootPageTitle),
-          "missing required option 'rootPageTitle'"
+          "missing required option 'rootPageTitle'",
         );
 
         const confluence = new ConfluenceClient({
@@ -167,10 +167,10 @@ program
         await confluence.createConfluencePage(page);
       } catch (error) {
         console.error(
-          `error: ${error.response?.body?.message ?? error.message}`
+          `error: ${error.response?.body?.message ?? error.message}`,
         );
       }
-    }
+    },
   );
 
 await program.parseAsync(process.argv);

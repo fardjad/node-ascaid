@@ -40,7 +40,7 @@ export const register = (registry) => {
         }
 
         const oas = YAML.parse(
-          fs.readFileSync(attrs.path, { encoding: "utf-8" })
+          fs.readFileSync(attrs.path, { encoding: "utf-8" }),
         );
 
         const cwd = process.cwd();

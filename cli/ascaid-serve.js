@@ -13,8 +13,8 @@ program
   .addArgument(
     new Argument("[rootDir]", "server root directory").default(
       ".",
-      "current directory"
-    )
+      "current directory",
+    ),
   )
   .addOption(configOption)
   .addOption(attributeOption)
@@ -22,7 +22,7 @@ program
   .action(async (rootDir, { config, attribute }) => {
     const { extensions, asciidoctorOptions: adoctorOptions } = await readConfig(
       config,
-      attribute
+      attribute,
     );
     await registerExtensions(extensions ?? [], path.resolve("."));
 
