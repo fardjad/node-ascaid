@@ -1,4 +1,4 @@
-FROM node:16 as builder
+FROM node:lts as builder
 
 ENV NODE_ENV production
 
@@ -7,7 +7,7 @@ WORKDIR /opt/node-ascaid
 COPY ./package*.json ./.npmrc ./
 RUN npm install --ignore-scripts
 
-FROM node:16 as app
+FROM node:lts as app
 
 ENV NODE_ENV production
 
