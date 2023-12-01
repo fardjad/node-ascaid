@@ -166,7 +166,7 @@ The following diagram shows a typical document writing and publishing workflow w
 
 2.  [Bash](https://www.gnu.org/software/bash)
 
-3.  [Node.js v16+](https://nodejs.org)
+3.  [Node.js](https://nodejs.org)
 
 4.  [Pandoc](https://pandoc.org)
 

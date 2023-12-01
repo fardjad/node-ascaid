@@ -27,13 +27,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [16, 18, 19]
+        node: [18, 19, 20]
       fail-fast: true
     steps:
       - uses: actions/checkout@main
       - uses: nikeee/setup-pandoc@v1
         with:
-          pandoc-version: "3.1.2"
+          pandoc-version: "3.1.9"
       - uses: actions/setup-node@main
         with:
           node-version: ${{ matrix.node }}
@@ -94,7 +94,7 @@ jobs:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
         with:
-          node-version: 18
+          node-version: 20
           registry-url: "https://registry.npmjs.org"
       - uses: actions/cache@main
         env:

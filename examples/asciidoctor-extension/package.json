@@ -4,9 +4,13 @@
   "license": "UNLICENSED",
   "description": "Example usage of ascaid with Asciidoctor extensions",
   "dependencies": {
-    "ascaid": "*",
+    "ascaid": "file:../..",
     "make-synchronous": "^1.0.0",
     "widdershins": "^4.0.1",
     "yaml": "^2.1.3"
+  },
+  "scripts": {
+    "ascaid:serve": "ascaid serve",
+    "ascaid:gfm": "ascaid adoc-to-gfm ./adocs ./docs"
   }
 }

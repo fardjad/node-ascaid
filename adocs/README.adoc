@@ -5,7 +5,7 @@
 :confluence-api-token: https://id.atlassian.com/manage/api-tokens[API token]
 :confluence: https://www.atlassian.com/software/confluence[Confluence]
 :gfm: https://github.github.com/gfm[GitHub Flavored Markdown]
-:nodejs: https://nodejs.org[Node.js v16+]
+:nodejs: https://nodejs.org[Node.js]
 :pandoc: https://pandoc.org[Pandoc]
 :wsl: https://docs.microsoft.com/en-us/windows/wsl[WSL]
 :agiledocumentation: http://agilemodeling.com/essays/agileDocumentation.htm

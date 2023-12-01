@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fardjad/node-ascaid/master/ascaid.config.schema.json",
+  "extensions": ["asciidoctor-kroki"],
+  "asciidoctorOptions": {
+    "attributes": {
+      "nofooter": true
+    }
+  }
+}

@@ -9,7 +9,7 @@ Markdown format, and place them in `docs` directory.
 ==== Requirements
 * A unix-like operating system (WSL is also supported)
 * Git
-* Node.js 16.x (and npm 8.x)
+* Node.js
 * Pandoc
 
 ==== Instructions

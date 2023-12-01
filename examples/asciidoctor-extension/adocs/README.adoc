@@ -1,0 +1,3 @@
+== Test
+
+oas::[path=../petstore.yaml]

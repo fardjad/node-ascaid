@@ -9,7 +9,7 @@ on:
     branches:
       - master
 env:
-  PANDOC_VERSION: 2.17.1
+  PANDOC_VERSION: 3.1.9
 
 jobs:
   publish:
@@ -40,7 +40,7 @@ jobs:
           curl -SsLo ~/.pandoc/pandoc.deb https://github.com/jgm/pandoc/releases/download/${{ env.PANDOC_VERSION }}/pandoc-${{ env.PANDOC_VERSION }}-1-amd64.deb
       - uses: actions/setup-node@main
         with:
-          node-version: "16.x"
+          node-version: 20
           registry-url: "https://npm.pkg.github.com"
       - name: Install dependencies
         run: |

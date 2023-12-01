@@ -26,13 +26,13 @@ The documentation of this project is generated with **ascaid**. Once Git hooks a
 
 <div class="ulist">
 
--   A unix-like operating system (WSL is also supported)
+- A unix-like operating system (WSL is also supported)
 
--   Git
+- Git
 
--   Node.js 16.x (and npm 8.x)
+- Node.js
 
--   Pandoc
+- Pandoc
 
 </div>
 
@@ -75,16 +75,6 @@ The documentation of this project is generated with **ascaid**. Once Git hooks a
 </div>
 
 </div>
-
-</div>
-
-</div>
-
-<div id="footer">
-
-<div id="footer-text">
-
-Last updated 2022-03-04 21:34:21 +0100
 
 </div>
 
