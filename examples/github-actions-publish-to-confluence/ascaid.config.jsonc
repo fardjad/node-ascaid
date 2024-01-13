@@ -3,7 +3,7 @@
   "extensions": ["asciidoctor-kroki"],
   "asciidoctorOptions": {
     "attributes": {
-      "nofooter": true
-    }
-  }
+      "nofooter": true,
+    },
+  },
 }
