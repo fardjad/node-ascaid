@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.9.9",
+  "version": "1.9.10",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -35,7 +35,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@asciidoctor/core": "^3.0.2",
+    "@asciidoctor/core": "^3.0.3",
     "ajv": "^8.12.0",
     "browser-sync": "^3.0.2",
     "commander": "^11.1.0",
