@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.9.11",
+  "version": "1.9.12",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -55,7 +55,7 @@
     "expect": "^29.7.0",
     "husky": "^8.0.3",
     "npm-check-updates": "^16.14.12",
-    "prettier": "^3.2.2"
+    "prettier": "^3.2.4"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.3"
