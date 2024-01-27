@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.9.13",
+  "version": "1.9.14",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -54,7 +54,7 @@
     "eslint-plugin-unicorn": "^50.0.1",
     "expect": "^29.7.0",
     "husky": "^9.0.6",
-    "npm-check-updates": "^16.14.13",
+    "npm-check-updates": "^16.14.14",
     "prettier": "^3.2.4"
   },
   "optionalDependencies": {
