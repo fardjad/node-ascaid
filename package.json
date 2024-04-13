@@ -42,8 +42,8 @@
     "confluence-api": "^1.4.0",
     "execa": "^8.0.1",
     "glob": "^10.3.12",
-    "pify": "^6.1.0",
-    "strip-json-comments": "^5.0.1"
+    "jsonc-parser": "^3.2.1",
+    "pify": "^6.1.0"
   },
   "repository": "git@github.com:fardjad/node-ascaid.git",
   "devDependencies": {
