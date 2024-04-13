@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [18, 19, 20]
+        node: ["lts/*", latest]
       fail-fast: true
     steps:
       - uses: actions/checkout@main
@@ -37,6 +37,7 @@ jobs:
       - uses: actions/setup-node@main
         with:
           node-version: ${{ matrix.node }}
+          check-latest: true
       - name: Cache node modules
         uses: actions/cache@main
         env:
@@ -94,7 +95,8 @@ jobs:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
         with:
-          node-version: 20
+          node-version: "lts/*"
+          check-latest: true
           registry-url: "https://registry.npmjs.org"
       - uses: actions/cache@main
         env:
