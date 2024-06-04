@@ -1,7 +1,7 @@
 {
   "name": "ascaid",
   "type": "module",
-  "version": "1.10.7",
+  "version": "1.10.8",
   "description": "Hassle-free documentation generation powered by AsciiDoc",
   "author": "Fardjad Davari <public@fardjad.com>",
   "license": "MIT",
@@ -36,7 +36,7 @@
   "main": "index.js",
   "dependencies": {
     "@asciidoctor/core": "^3.0.4",
-    "ajv": "^8.14.0",
+    "ajv": "^8.15.0",
     "browser-sync": "^3.0.2",
     "commander": "^12.1.0",
     "confluence-api": "^1.4.0",
