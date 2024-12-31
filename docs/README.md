@@ -215,8 +215,8 @@ You can install the package globally with npm:
     Commands:
       serve [directory]              start an AsciiDoc server
       adoc-to-gfm <srcDir> <outDir>  AsciiDoc -> GitHub flavored markdown
-      gfm-to-confluence <dir>        Publish a GitHub flavored markdown directory
-                                     to Confluence
+      gfm-to-confluence <dir>        Publish a GitHub flavored markdown directory to
+                                     Confluence
       help [command]                 display help for command
 
 </div>
@@ -244,9 +244,9 @@ You can install the package globally with npm:
     Options:
       -V, --version                   output the version number
       -c, --config <path>             config file path
-      -a, --attribute [key=value...]  set a document attribute. The value given
-                                      will override values from the config file.
-                                      Passing the key without =value will unset the
+      -a, --attribute [key=value...]  set a document attribute. The value given will
+                                      override values from the config file. Passing
+                                      the key without =value will unset the
                                       attribute (default: [])
       -h, --help                      display help for command
 
@@ -276,9 +276,9 @@ You can install the package globally with npm:
       -V, --version                   output the version number
       --ignore [globPattern...]       glob patterns to ignore (default: ["**/_*"])
       -c, --config <path>             config file path
-      -a, --attribute [key=value...]  set a document attribute. The value given
-                                      will override values from the config file.
-                                      Passing the key without =value will unset the
+      -a, --attribute [key=value...]  set a document attribute. The value given will
+                                      override values from the config file. Passing
+                                      the key without =value will unset the
                                       attribute (default: [])
       -h, --help                      display help for command
 
