@@ -66,7 +66,7 @@ graph LR
   GFM -- ascaid gfm-to-confluence --> Confluence
 
 %% Hack to make the diagram more visible in dark backgrounds
-subgraph &nbsp
+subgraph "&nbsp;"
     Writer
     ADOC
     GFM
