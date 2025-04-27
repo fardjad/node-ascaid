@@ -1,7 +1,7 @@
-import { Argument, Option, program } from "commander";
-import path from "node:path";
-import fs from "node:fs";
 import assert from "node:assert";
+import fs from "node:fs";
+import path from "node:path";
+import { Argument, Option, program } from "commander";
 
 import { pandocConvert } from "../index.js";
 import { readVersion } from "../index.js";
@@ -11,7 +11,7 @@ const MD_TITLE_REGEX = /^#+\s+(.*)/;
 
 const isNotNullOrEmptyString = (string_) => {
   return (
-    string_ != undefined && typeof string_ === "string" && string_.trim() !== ""
+    string_ != null && typeof string_ === "string" && string_.trim() !== ""
   );
 };
 
@@ -40,7 +40,7 @@ const createPageTree = async (title, filePath) => {
       const firstLine = contents
         .split(/\n\r?/)
         .find((line) => MD_TITLE_REGEX.test(line.trim()));
-      if (firstLine != undefined) {
+      if (firstLine != null) {
         title = firstLine.match(MD_TITLE_REGEX)[1].trim();
       }
       const body = await pandocConvert(contents, "gfm", "html", [

@@ -1,8 +1,8 @@
-import fs from "fs";
-import YAML from "yaml";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import makeSynchronous from "make-synchronous";
-import path from "path";
-import { fileURLToPath } from "url";
+import YAML from "yaml";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

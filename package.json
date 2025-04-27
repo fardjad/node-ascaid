@@ -25,9 +25,10 @@
   ],
   "scripts": {
     "prepare": "husky",
-    "fix": "eslint --fix . && prettier -w .",
-    "test": "glob -c \"node --test --test-reporter spec\" \"lib/**/*.test.js\"",
-    "posttest": "eslint . && prettier -c ."
+    "fix": "npm run format",
+    "format": "biome format --write && biome check --write",
+    "posttest": "biome ci",
+    "test": "glob -c \"node --test --test-reporter spec\" \"lib/**/*.test.js\""
   },
   "bin": {
     "ascaid": "./cli/ascaid",
@@ -47,15 +48,11 @@
   },
   "repository": "git@github.com:fardjad/node-ascaid.git",
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "asciidoctor-kroki": "^0.18.1",
-    "eslint": "^8.57.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-unicorn": "^52.0.0",
     "expect": "^29.7.0",
-    "husky": "^9.0.11",
-    "npm-check-updates": "^16.14.18",
-    "prettier": "^3.2.5"
+    "husky": "^9.1.7",
+    "npm-check-updates": "^18.0.1"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.3"

@@ -1,7 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
 import { Argument, Option, program } from "commander";
 import { globSync } from "glob";
-import path from "node:path";
-import fs from "node:fs";
 
 import { adocConvert } from "../index.js";
 import { pandocConvert } from "../index.js";

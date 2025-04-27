@@ -3,7 +3,7 @@
   "extensions": ["asciidoctor-kroki", "./adocs/_extensions/exec.js"],
   "asciidoctorOptions": {
     "attributes": {
-      "nofooter": true,
-    },
-  },
+      "nofooter": true
+    }
+  }
 }

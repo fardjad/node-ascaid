@@ -1,6 +1,3 @@
-#!/bin/bash
-. "$(dirname "$0")/_/husky.sh"
-
 npm test
 
 ROOT="$(dirname "$0")/.."
