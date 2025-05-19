@@ -39,7 +39,7 @@
     "@asciidoctor/core": "^3.0.4",
     "ajv": "^8.17.1",
     "browser-sync": "^3.0.4",
-    "commander": "^13.1.0",
+    "commander": "^14.0.0",
     "confluence-api": "^1.4.0",
     "execa": "^9.5.2",
     "glob": "^11.0.2",
