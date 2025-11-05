@@ -48,7 +48,7 @@
   },
   "repository": "git@github.com:fardjad/node-ascaid.git",
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.3.4",
     "asciidoctor-kroki": "^0.18.1",
     "expect": "^29.7.0",
     "husky": "^9.1.7",
