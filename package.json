@@ -42,7 +42,7 @@
     "commander": "^13.1.0",
     "confluence-api": "^1.4.0",
     "execa": "^9.5.2",
-    "glob": "^11.0.2",
+    "glob": "^12.0.0",
     "jsonc-parser": "^3.3.1",
     "pify": "^6.1.0"
   },
